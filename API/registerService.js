@@ -1,122 +1,48 @@
-// 'use strict';
-//
-// var mongoose = require('mongoose');
-//     // User = mongoose.model('Users');
-//
-//
-//
-// /* .........List of all Registered Users in DATABASE:_ Users.......... */
-// //
-// // exports.list_all_users = function(req, res) {
-// //     User.find({}, function(err, user) {
-// //         if (err)
-// //             res.send(err);
-// //         res.json(user);
-// //     });
-// // };s
-//
-// /* ....Send User(POST) Info to Backend(Save in DATABASE)..... */
-//
-// exports.create_a_user = function(req, res) {
-//     var db = req.db;
-//     var dbCollections = db.collections;
-//     // var new_user = User(req.body);
-//     console.log("you have reached inside create a user " + JSON.stringify(req.body.firstname));
-//     var firstname = req.body.firstname;
-//     var lastname = req.body.lastname;
-//     var email = req.body.email;
-//     var password = req.body.password;
-//     var gender = req.body.gender;
-//     var birthday = req.body.birthday;
-//     var phone = req.body.phone;
-//     console.log('Adding Users to Database..');
-//     var user = {
-//         "username": firstname,
-//         "firstname": firstname,
-//         "lastname": lastname,
-//         "email": email,
-//         "password": password,
-//         "gender": gender,
-//         "birthday": birthday,
-//         "contact": phone
-//     };
-//     // new_user.save(function (err, records) {
-//     //     if (err) {
-//     //         res.send("There was a problem.");   // If it failed, return error
-//     //     }
-//     //     else {
-//     //         res.send('Successful');    // And forward to success page  --> angularjs/login.js
-//     //     }
-//     // });
-//
-//
-//     dbCollections.users.insert(user, function (err, records) {
-//         if (err) {
-//             res.send("There was a problem.");   // If it failed, return error
-//         }
-//         else {
-//             res.send('Successful');    // And forward to success page  --> angularjs/login.js
-//         }
-//     });
-// };
+//Using mongoose as the middleware to access mongodb
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+//The DB uri is in a different file to avoid pushing it into git
+const keys = require('../config/keys');
 
-/*------------------------------------------------------*/
+//Connecting to the database via mongoose
+mongoose.connect(keys.mongoURI, function(err, result) {
+  if (err) {
+    console.log('error');
+  } else {
+    console.log('Successfully connected to db');
+  }
+});
 
+//creating a schema for the registration process
+var UserSchema = new mongoose.Schema({
+  username: String,
+  firstname: String,
+  lastname: String,
+  email: String,
+  password: String,
+  gender: String,
+  birthday: String,
+  contact: String
+});
 
-var mongoose = require('mongoose');
-  var  User = mongoose.model('Users');
+//creating a new model for the schema
+var User = mongoose.model('User', UserSchema);
 
+exports.create_a_user = function(req, res, next) {
+  console.log('inside create user');
+  //creating a new instance of the model for inserting a new user
+  var user = new User(req.body);
 
-/*-------------------------Working---------------------*/
-/* .........List of all Registered Users in DATABASE:_ Users.......... */
-//
-// exports.list_all_users = function(req, res) {
-//     User.find({}, function(err, user) {
-//         if (err)
-//             res.send(err);
-//         res.json(user);
-//     });
-// };
+  console.log(
+    'you have reached inside create a user ',
+    JSON.stringify(req.body)
+  );
 
-/* ....Send User(POST) Info to Backend(Save in DATABASE)..... */
-
-exports.create_a_user = function(req, res) {
-    var db = req.db;
-    var dbCollections = db.collections;
-    console.log("you have reached inside create a user " + JSON.stringify(req.body.firstname));
-    var firstname = req.body.firstname;
-    var lastname = req.body.lastname;
-    var email = req.body.email;
-    var password = req.body.password;
-    var gender = req.body.gender;
-    var birthday = req.body.birthday;
-    var phone = req.body.phone;
-    console.log('Adding Users to Database..');
-    var user = {
-        "username": firstname,
-        "firstname": firstname,
-        "lastname": lastname,
-        "email": email,
-        "password": password,
-        "gender": gender,
-        "birthday": birthday,
-        "contact": phone
-    };
-
-    dbCollections.users.insert(user, function (err, users) {
-        if (err) {
-            res.send("There was a problem.");   // If it failed, return error
-        }
-        else {
-            res.send('Successful');    // And forward to success page  --> angularjs/login.js
-        }
-    });
+  user.save(function(err, user) {
+    if (err) {
+      return next(err);
+    }
+    res.send('Successful');
+  });
+  console.log('Users added to Database..');
 };
-
-//
-// User.save(function(err, user) {
-//
-//      if (err)
-//          res.send(err);
-//      res.json(user);
-//  });
