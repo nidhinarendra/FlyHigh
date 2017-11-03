@@ -24,7 +24,35 @@ login.controller('login', function($scope, $http) {
           $scope.invalid_login = true;
           $scope.unexpected_error = true;
         } else if (data.statusCode === 200) {
-          window.location.assign('/homepage.html');
+          window.location.assign('/home');
+        }
+      })
+      .error(function(error) {
+        $scope.unexpected_error = false;
+        $scope.invalid_login = true;
+      });
+  };
+
+  $scope.adminsignIn = function() {
+    var data = {
+      email: $scope.email,
+      password: $scope.password
+    };
+    console.log('Inside admin signIn function ' + $scope.email);
+    $http({
+      method: 'POST',
+      url: '/checkadminlogin',
+      headers: { 'Content-Type': 'application/json' },
+      data: data
+    })
+      .success(function(data) {
+        if (data.statusCode == 401) {
+          console.log('error finding user');
+          window.alert('Invalid email or password');
+          $scope.invalid_login = true;
+          $scope.unexpected_error = true;
+        } else if (data.statusCode === 200) {
+          window.location.assign('/adminhome');
         }
       })
       .error(function(error) {

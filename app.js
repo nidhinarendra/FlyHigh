@@ -56,11 +56,17 @@ if ('development' == app.get('env')) {
 app.post('/register', registerService.create_a_user);
 app.post('/checklogin', checklogin.checkLogin);
 app.get('/login', login.login);
+app.get('/home', routes.home);
 
 app.delete('/deleteuser/:username', deleteuser.delete_a_user);
 app.put('/updateuser/:username', updateuser.update_a_user);
 app.get('/getuser/:username', getuser.get_user_details);
 app.get('/Listuser', user.list); //Not Working
+app.get('/admin', routes.admin);
+app.get('/users', getuser.get_user_details);
+app.get('/adminhome', routes.adminhome);
+app.post('/checkadminlogin', checklogin.checkadminLogin);
+app.get('/userArray', getuser.get_user_details);
 
 // app.get('/getallusers',)
 

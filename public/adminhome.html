@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FlyHigh!</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="angularjs/adminhome.js" </script>
+</head>
+
+<body ng-app="adminhome" ng-controller="adminhome" ng-init="userArray();">
+  <div>
+    <ul>
+        <li ng-repeat="name in users">{{name}}</li>
+    </ul>
+</div>
+</body>

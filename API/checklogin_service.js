@@ -29,3 +29,30 @@ exports.checkLogin = function(req, res) {
     });
   });
 };
+
+exports.checkadminLogin = function(req, res) {
+  console.log('entered admin login function');
+  console.log('the details', req.body);
+  var email = req.body.email; //req.param("email");
+  var password = req.body.password; //param("password");
+  var json_responses;
+
+  mongo.connect(keys.mongoURI, function() {
+    var coll = mongo.collection('admin');
+    coll.findOne({ email: email, password: password }, function(err, user) {
+      if (user) {
+        json_responses = {
+          statusCode: 200
+        };
+        req.session.user = user.email;
+        res.send(json_responses);
+      } else {
+        console.log('no user found');
+        json_responses = {
+          statusCode: 401
+        };
+        res.send(json_responses);
+      }
+    });
+  });
+};
