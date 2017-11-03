@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page!</title>
+
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+    <script src="angularjs/admin.js"></script>
+</head>
+
+<body ng-app="admin_login" ng-controller="admin_controller">
+<fieldset>
+    <legend>I have access to:</legend>
+    <br>
+
+    <form form method="delete" ng-submit="delete_user();" method="delete” name="delete_user”>
+        <input type="text" id="username" ng-model="username" placeholder="username">
+        <input type="submit" value="delete user">
+    </form>
+
+    <br>
+
+    <form form method="get" ng-submit="find_user();" method="get” name="find_user”>
+        <input type="text" id="username" ng-model="username2" placeholder="username">
+        <input type="submit" value="find user">
+    </form>
+    <br>
+
+
+    <form form method="put" ng-submit="update_user();" method="put” name="update_user”>
+
+        <p> Please fill out the new user details to update</p>
+
+        <div id="inlinedisplay">
+            <input type="text" name = "firstname" id="firstname" ng-model="firstname" placeholder="First Name">
+            <input type="text" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name">
+            <br> <br>
+        </div>
+
+        <input type="email" name = "email" id="email" ng-model="email" placeholder="email id">
+        <br> <br>
+
+        <label for="gender"> Gender:</label><br> <input type="radio" id="male" name="gender" value="male"> <label for="male"> Male</label>
+        <input type="radio" id="female" name="gender" ng-model="gender" value="female">
+
+        <label for="female"> Female</label> <br> <br> <label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
+        <br> <br>
+        <label for="phone_number"> Phone number: </label> <input type="tel" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$">
+        <br> <br>
+        <input type="submit" value="Update user">
+    </form>
+
+
+</fieldset>
+
+
+</body>
+</html>

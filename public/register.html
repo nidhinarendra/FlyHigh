@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FlyHigh!</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="angularjs/login.js"></script>
+<script src="otherjavascripts/passwordCheck.js" type="text/javascript"></script>
+
+</head>
+
+<body ng-app="login" ng-controller="login">
+	<fieldset>
+		<legend>FlyHigh with us</legend>
+		<br>
+
+		<form method="post" ng-submit="register();" name="register”>
+			<div id="inlinedisplay">
+				<input type="text" name = "firstname" id="firstname" ng-model="firstname" placeholder="First Name" required>
+				<input type="text" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name" required>
+				<br> <br>
+			</div>
+
+			<input type="email" name = "email" id="email" ng-model="email" placeholder="email id" required>
+			<br> <br>
+
+
+			<input type="password" name= "password" id="password" ng-model="password" type="password" placeholder="New password" required onkeyup="pwcheck()">
+			<br> <br>
+			<span id='message'></span>
+			<input type="password" name="confirmpassword" id="repassword" placeholder="Re-enter password" required onkeyup="pwrecheck()">
+			<span id='alert_message'></span> <br> <br>
+
+			<label for="gender"> Gender:</label><br> <input type="radio" id="male" name="gender" value="male"> <label for="male"> Male</label>
+			<input type="radio" id="female" name="gender" ng-model="gender" value="female">
+
+			<label for="female"> Female</label> <br> <br> <label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
+			<br> <br>
+			<label for="phone_number"> Phone number: </label> <input type="tel" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
+			<br> <br>
+			<input type="submit" value="Join us">
+		</form>
+		<br>
+
+		<label for="existingCustomer">Existing Customer?</label>&ensp;<input type="submit" value="Sign-in" onclick="location.href='login.html'">
+
+	</fieldset>
+
+
+</body>
+</html>

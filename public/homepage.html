@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FlyHigh!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/otherjavascripts/homepage.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!--Internal Stylesheets-->
+  <link rel="stylesheet" href="/stylesheets/homepage.css">
+    <!--External Stylesheets-->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!--Script to load the ajax tabs in the homepage-->
+  <script>
+  $(function() {
+  $('#tabs').tabs();
+});
+</script>
+
+</head>
+
+<body>
+  <!--Container created for list of flights to select. The flight listed can be dragged and dropped.-->
+
+  <div class = "container">
+    <div class="row" id="animation">
+      <img id="flightgif" src="/images/animate.gif" style="position:absolute; top: 10px;"/>
+    </div>
+    <div class="row" id="welcome">
+      <h2>Welcome Aboard!!</h2>
+    </div>
+  </div>
+  <!--Container created for the ajax tab and embedding 3 different tabs-->
+
+  <div class = "container">
+    <!--Creating a list of the three tabs-->
+    <div class="ui-tabs-panel ui-tabs" id="tabs">
+      <ul>
+        <li><a href="#tabs-1">FlightPreference</a></li>
+        <li><a href="#tabs-2">Existing bookings</a></li>
+        <li><a href="#tabs-3">History</a></li>
+      </ul>
+
+      <!--First tab is to show the flight preferences to the user where other features like drag and drop are implemented-->
+      <div id="tabs-1">
+        <div class="row" id="main">
+          <!--Bootstrap used to divide the row into 2 sections-->
+          <div class="col-md-6">
+            <!--The list of Flights to be chosen by the user as preferred flights for priortized flight suggestions in the future    -->
+            <fieldset id="field">
+              <legend class="ui-widget-header">Pick your preferred Airlines below</legend>
+                <!--Implementing drag and drop-->
+              <ul id="chooseflights">
+                <li class="draggable"><img class="img" src="/images/American.jpg"/>American Airlines</li>
+                <li class="draggable"><img class="img" src="/images/jetblue.jpeg"/>JetBlue</li>
+                <li class="draggable"><img class="img" src="/images/united.jpeg"/>United Airlines</li>
+                <li class="draggable"><img class="img" src="/images/Southwest.jpeg"/>Southwest Airlines</li>
+                <li class="draggable"><img class="img" src="/images/Alaska.jpeg"/>Alaska Airlines</li>
+                <li class="draggable"><img class="img" src="/images/Delta.jpeg"/>Delta Airlines</li>
+                <li class="draggable"><img class="img" src="/images/virgin.jpeg"/>Virgin Atlantic Airlines</li>
+                <li class="draggable"><img class="img" src="/images/Capeair.jpeg"/>Cape Air</li>
+                <li class="draggable"><img class="img" src="/images/elite.jpeg"/>Elite Airlines</li>
+                <li class="draggable"><img class="img" src="/images/usajet.jpeg"/>USA jet Airlines</li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="col-md-6">
+            <!--The flights are to be dropped in this fieldset by the user-->
+            <fieldset id="field">
+              <legend class="ui-widget-header">Drop Your Favourite Airlines below</legend>
+              <!--JQUERY UI widget==> Header used for better styled Headings-->
+              <ul id="fav_flights" class="droppable"></ul>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <!--Created tab 2 to show the existing bookings the user has-->
+      <div id="tabs-2">
+        <div class="row" id="main">
+          <!--Bootstrap used to divide the row into 2 sections-->
+          <fieldset id="field">
+            <ol id="existingBooking">
+              <li id="libooking" value="1">Date: 01/01/2018</br>
+                To: San Fransisco</br>
+                From: Chicago</br>
+                Time: 12:30AM</br>
+              </li>
+              <li id="libooking">Date: 01/31/2018</br>
+                To: Chicago</br>
+                From: SanFransisco</br>
+                Time: 12:30AM
+              </li>
+
+            </ol>
+          </fieldset>
+        </div>
+      </div>
+
+      <!--Created tab 3 to show the history of the user activity-->
+      <div id="tabs-3">
+        <div class="row" id="main">
+          <!--Bootstrap used to divide the row into 2 sections-->
+          <fieldset id="field">
+            <ol id="history">
+              <li id="lihistory" value="1">Date: 01/01/2017</br>
+                To: Seattle</br>
+                From: Michigan</br>
+                Time: 2:30AM</br>
+              </li>
+              <li id="lihistory">Date: 01/31/2017</br>
+                To: New York</br>
+                From: SanFransisco</br>
+                Time: 1:30AM
+              </li>
+              <li id="lihistory">Date: 11/31/2016</br>
+                To: Portland</br>
+                From: Mexico</br>
+                Time: 1:30AM
+              </li>
+
+            </ol>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

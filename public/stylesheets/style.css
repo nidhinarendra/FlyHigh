@@ -1,0 +1,52 @@
+
+    h1 {
+      color: white;
+    }
+
+    legend {
+      color:  white;
+    }
+
+    label {
+      font-weight: bold;
+      color: Black;
+    }
+
+    input
+    {
+      color: black;
+    }
+    input[type = "radio"]      /*CSS Styles for radio*/
+    {
+        width: 15px;
+
+    }
+    input:focus
+    {
+       font-size: 15px;
+    }
+
+
+    fieldset
+    {
+      position:relative;
+      left: 50px;
+      top: 120px;
+      border: 5px groove gray;
+      width: 350px;
+      display: inline-block;
+    }
+
+    body
+    {
+      background-image: url("/images/loginimg.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+   }
+    #inlinedisplay
+    {
+      display: inline-block;
+      color: Green;
+    }

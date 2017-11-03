@@ -1,0 +1,22 @@
+{
+  "name": "FlyHigh",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "client-sessions": "^0.8.0",
+    "connect-mongo": "^2.0.0",
+    "crypto-js": "^3.1.9-1",
+    "ejs": "*",
+    "express": "3.2.6",
+    "express-session": "^1.15.6",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.12.4",
+    "monk": "^6.0.5",
+    "mysql": "^2.14.1",
+    "simple-node-logger": "^0.93.28"
+  }
+}

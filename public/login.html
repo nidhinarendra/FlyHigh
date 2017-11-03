@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FlyHigh!</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<script src="angularjs/login.js"></script>
+</head>
+
+<body ng-app="login" ng-controller="login">
+	<fieldset>
+		<legend>FlyHigh with us</legend>
+		<br>
+
+		<form form method="post" ng-submit="signIn();" method="post” name="
+							signin”>
+
+			<input type="email" id="email" ng-model="email" placeholder="email id" required>
+			<br> <br> <input type="password" id="pwd" ng-model="password"
+				type="password" placeholder="password"
+				required> <br> <br>
+
+				<input type="submit" value="Sign-in">
+
+
+		</form>
+	</fieldset>
+
+
+</body>
+</html>
