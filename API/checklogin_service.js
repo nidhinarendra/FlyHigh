@@ -2,7 +2,7 @@
 const keys = require('../config/keys');
 var mongo = require('./mongo');
 
-/*--------------------------working------------------------*/
+/*--------------------------User Authentication------------------------*/
 exports.checkLogin = function(req, res) {
   console.log('entered login function');
   console.log('the details', req.body);
@@ -29,7 +29,7 @@ exports.checkLogin = function(req, res) {
     });
   });
 };
-
+/*---------------------------------Admin Authentication------------------------------*/
 exports.checkadminLogin = function(req, res) {
   console.log('entered admin login function');
   console.log('the details', req.body);
