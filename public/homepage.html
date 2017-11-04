@@ -10,7 +10,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="angularjs/login.js"></script>
+  <!--<script src="angularjs/logout.js"></script>-->
 
   <!--Internal Stylesheets-->
   <link rel="stylesheet" href="/stylesheets/homepage.css">
@@ -34,8 +34,13 @@
     <div class="row" id="animation">
       <img id="flightgif" src="/images/animate.gif" style="position:absolute; top: 10px;"/>
     </div>
+    <div class="row">
+      <form action = "/logout" method = "GET">
+        <input type="submit" value="Log Out!" />
+      </form>
+    </div>
     <div class="row" id="welcome">
-      <h2>Welcome Aboard!!</h2>
+        <h2>Welcome Aboard!!</h2>
     </div>
 
   </div>

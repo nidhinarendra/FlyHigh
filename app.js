@@ -69,10 +69,11 @@ app.get('/', routes.index);
 
 // app.post('/register', login.register);
 app.get('/homepage', login.redirectToHomepage);
-app.post('/logout', function(req, res) {
+app.get('/logout', function(req, res) {
   console.log('logout clicked');
   req.session.destroy();
-  window.location.assign('/login');
+  // window.location.assign('/login');
+  res.redirect('/login');
 });
 
 http.createServer(app).listen(app.get('port'), function() {
