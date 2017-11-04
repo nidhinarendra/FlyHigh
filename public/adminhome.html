@@ -30,10 +30,10 @@
       <!-- /.row -->
       <div class="row">
         <!-- /.col-lg-6 -->
-        <div class="col-sm-6 col-sm-offset-1">
+        <div class="col-sm-8 col-sm-offset-1">
           <form editable-form name="tableform" onaftersave="saveTable()" oncancel="cancel()">
             <!-- table -->
-            <div class="panel panel-default">
+            <div class="panel panel-default" style="max-width: 200;">
               <div class="panel-heading">
                 User Details
               </div>
@@ -44,38 +44,60 @@
                       <tr>
                         <th class="tableRow">Username</th>
                         <th class="tableRow">Email</th>
+												<th class="tableRow">Contact</th>
+												<th class="tableRow">DOB</th>
 												<th class="tableRow">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr ng-repeat="item in users" class="success">
                         <td>
-                          <span e-form="tableform" >
+                          <span editable-text="item.username" e-form="tableform" >
                             {{ item.username }}
                           </span>
                         </td>
+
                         <td>
-                          <span editable-text="item.username" e-form="tableform">
+                          <span editable-text="item.email" e-form="tableform">
                             {{ item.email || 'Not Defined' }}
                           </span>
                         </td>
 												<td>
-													<div class="btn-edit col-sm-6 col-sm-push-1">
-						                <button type="button" class="btn btn-default" ng-show="!tableform.$visible" ng-click="tableform.$show()">
-						                  Edit
-						                </button>
-						              </div>
-						              <div class="btn-form" ng-show="tableform.$visible">
-						                <button type="submit" ng-disabled="tableform.$waiting" class="btn btn-primary">Save</button>
-						                <button type="button" ng-disabled="tableform.$waiting" ng-click="tableform.$cancel()" class="btn btn-default">Cancel</button>
-						              </div>
-													<div class="btn-delete col-sm-6 col-sm-push-1">
-						                <button type="button" class="btn btn-default" ng-click="removeRow(item.email)">
-						                  Delete
-						                </button>
-						              </div>
-
+                          <span editable-text="item.contact" e-form="tableform" >
+                            {{ item.contact || "NA" }}
+                          </span>
                         </td>
+												<td>
+                          <span editable-text="item.birthday" e-form="tableform" >
+                            {{ item.birthday || "NA" }}
+                          </span>
+                        </td>
+
+												<td>
+													<div class="btn-edit col-sm-6 col-sm-push-1">
+                 					<button type="button" class="btn btn-primary" ng-show="!tableform.$visible" ng-click="tableform.$show()">
+                   						Edit
+                 					</button>
+               					</div>
+												<div class="btn-form" ng-show="tableform.$visible">
+											      <button type="submit" ng-disabled="tableform.$waiting" class="btn btn-primary">Save</button>
+											      <button type="button" ng-disabled="tableform.$waiting" ng-click="tableform.$cancel()" class="btn btn-default">Cancel</button>
+											  </div>
+												<div class="btn-delete col-sm-6 col-sm">
+						              <button type="button" class="btn btn-danger" ng-click="removeRow(item.email)">
+						                  Delete
+						              </button>
+												</div>
+                        </td>
+												<script type="text/ng-template">
+												    <td><input type="text" ng-model=item.username class="form-control input-sm"/></td>
+												    <td><input type="text" ng-model=item.email class="form-control input-sm"/></td>
+												    <td>
+												     <button type="button" class="btn btn-primary" ng-click="updateEmployee(employee)">Save</button>
+												     <button type="button" class="btn btn-danger" ng-click="reset()">Cancel</button>
+												    </td>
+												   </script>
+
                       </tr>
                     </tbody>
                   </table>
