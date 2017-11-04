@@ -58,7 +58,7 @@ app.post('/checklogin', checklogin.checkLogin);
 app.get('/login', login.login);
 app.get('/home', routes.home);
 
-app.delete('/deleteuser/:username', deleteuser.delete_a_user);
+app.delete('/deleteuser/:email', deleteuser.delete_a_user);
 app.put('/updateuser/:username', updateuser.update_a_user);
 app.get('/getuser/:username', getuser.get_user_details);
 app.get('/Listuser', user.list); //Not Working

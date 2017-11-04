@@ -1,19 +1,18 @@
-'use strict'
-/*--------------------------Working----------------------*/
-var mongoose = require('mongoose');
-    // User = mongoose.model('Users');
+const keys = require('../config/keys');
+var mongo = require('./mongo');
 
-exports.delete_a_user = function(req,res){
-    var db = req.db;
-    var dbCollection = db.collections.users;
-    var username = req.params.username;
-    console.log('The delete service is being executed for : ' + username);
-    dbCollection.deleteOne({username: username}, function (err, user) {
-        if (err) {
-            res.send("There was a problem.");   // If it failed, return error
-        }
-        else {
-            res.send('Successful');    // And forward to success page  --> angularjs/login.js
-        }
+exports.delete_a_user = function(req, res) {
+  console.log(Object.keys(req));
+  console.log(req.params);
+  console.log(req.params.email);
+  mongo.connect(keys.mongoURI, function() {
+    var coll = mongo.collection('users');
+    coll.deleteOne({ email: req.params.email }, function(err, user) {
+      if (err) {
+        res.send('Problem');
+      } else {
+        res.send('successful');
+      }
     });
+  });
 };
