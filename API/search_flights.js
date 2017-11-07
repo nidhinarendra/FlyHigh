@@ -153,9 +153,9 @@ exports.get_preferred_flights_oneway = function(req,res){
                 if (err) throw err;
                 // console.log(result);
                 for (var j = 0; j <= reply.length; j++) {
-                    var i = result.indexOf(reply[j]);
+                    var i = result.indexOf(totalflights[j]);
                     if (i != -1) {
-                        array.splice(i, 1);
+                        result.splice(i, 1);
                     }
                 }
                 json_response = {
@@ -241,7 +241,7 @@ exports.get_preferred_flights_twoway = function(req,res) {
             for (var j = 0; j <= reply.length; j++) {
                 var i = other_outgoing.indexOf(preferred_outgoing[j]);
                 if (i != -1) {
-                    array.splice(i, 1);
+                    other_outgoing.splice(i, 1);
                 }
             }
             getreturnflights(preferred_outgoing,other_outgoing)
