@@ -1,5 +1,5 @@
-const keys = require('../../config/keys');
-var mongo = require('../../API/mongo');
+const keys = require('../config/keys');
+var mongo = require('./mongo');
 /*-------------------------------Working-------------------------------*/
 exports.get_flights_oneway = function(req, res) {
     console.log(Object.keys(req));
@@ -78,6 +78,8 @@ exports.get_flights_twoway = function(req, res) {
     });
 
     get_returnflights = function(result) {
+        var preferred_flight_name = req.body.flight_name;
+
         mongo.connect(keys.mongoURI, function () {
             var coll = mongo.collection('simulatedFlightData');
 
@@ -98,3 +100,25 @@ exports.get_flights_twoway = function(req, res) {
         });
     }
 };
+
+
+// exports.show_preferred_flights = function(req, res) {
+//
+//     var source = req.body.source;
+//     var destination = req.body.destination;
+//     var travel_date = req.body.travel_date;
+//     var return_date = req.body.return_date;
+//     var user_preferred_flight = request.body.preferred_flights;
+//     for (i=0; i<user_preferred_flight.length;i++)
+//     {
+//         mongo.connect(keys.mongoURI, function () {
+//             var coll = mongo.collection('simulatedFlightData');
+//
+//             coll.find({
+//                 source: source,
+//                 destination:destination,
+//                 Date: travel_date,
+//                 Date: return_date
+//             })
+//         })
+// }
