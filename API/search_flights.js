@@ -114,17 +114,18 @@ exports.get_flights_twoway = function(req, res) {
 //     });
 // };
 /*---Method2 to find preferred flights-------*/
-exports.get_preferred_flights_oneway = function(req,res){
+exports.get_preferred_flights_oneway = function(req,res) {
     console.log(Object.keys(req));
     var preferred = req.body.preferred_flights;
     var source = req.body.source;
     var destination = req.body.destination;
     var travel_date = req.body.travel_date;
     var totalflights = [];
-    var i=0;
-    preferredflights(totalflights, preferred, i, source,destination,travel_date);
-    preferredflights = function(totalflights,preferred,i,source,destination,travel_date) {
-        mongo.connect(keys.mongoURI, function () {
+    var i = 0;
+
+    // while(i<preferred.length){
+    mongo.connect(keys.mongoURI, function () {
+        while (i < preferred.length) {
             console.log("Looking for preferred flights");
             var coll = mongo.collection('simulatedFlightData');
             coll.find({
@@ -135,21 +136,23 @@ exports.get_preferred_flights_oneway = function(req,res){
             }).toArray(function (err, flights) {
                 if (err) throw (err);
                 totalflights = totalflights.concat(flights);
-                if (i < preferred.length) {
-                    i++;
-                    preferredflights(totalflights, preferred, i, source, destination, travel_date);
-                }
-                else {
-                    findotherflights(totalflights);
-                    // return totalflights
-                }
+                i++;
+                // if (i < preferred.length) {
+                //     i++;
+                //     // preferredflights(totalflights, preferred, i, source, destination, travel_date);
+                // }
+                // else {
+                //     findotherflights(totalflights);
+                //     // return totalflights
+                // }
             });
-        });
-    };
+        };
+        findotherflights(totalflights);
+    });
     findotherflights = function (totalflights) {
         mongo.connect(keys.mongoURI, function () {
             coll.find({source: source, destination: destination, Date: travel_date}).toArray(function (err, result) {
-
+                console.log("inside find other flights");
                 if (err) throw err;
                 // console.log(result);
                 for (var j = 0; j <= reply.length; j++) {
@@ -166,8 +169,54 @@ exports.get_preferred_flights_oneway = function(req,res){
                 res.send(json_response);
             });
         });
-    }
+    };
 };
+//     preferredflights(totalflights, preferred, i, source,destination,travel_date);
+//     preferredflights = function(totalflights,preferred,i,source,destination,travel_date) {
+//         mongo.connect(keys.mongoURI, function () {
+//             console.log("Looking for preferred flights");
+//             var coll = mongo.collection('simulatedFlightData');
+//             coll.find({
+//                 source: source,
+//                 destination: destination,
+//                 Date: travel_date,
+//                 fligtName: preferred[i]
+//             }).toArray(function (err, flights) {
+//                 if (err) throw (err);
+//                 totalflights = totalflights.concat(flights);
+//                 if (i < preferred.length) {
+//                     i++;
+//                     preferredflights(totalflights, preferred, i, source, destination, travel_date);
+//                 }
+//                 else {
+//                     findotherflights(totalflights);
+//                     // return totalflights
+//                 }
+//             });
+//         });
+//     };
+//     findotherflights = function (totalflights) {
+//         mongo.connect(keys.mongoURI, function () {
+//             coll.find({source: source, destination: destination, Date: travel_date}).toArray(function (err, result) {
+//
+//                 if (err) throw err;
+//                 // console.log(result);
+//                 for (var j = 0; j <= reply.length; j++) {
+//                     var i = result.indexOf(totalflights[j]);
+//                     if (i != -1) {
+//                         result.splice(i, 1);
+//                     }
+//                 }
+//                 json_response = {
+//                     preferredflights: totalflights,
+//                     otherflights: result
+//                 };
+//                 console.log("hi" + json_response);
+//                 res.send(json_response);
+//             });
+//         });
+//     }
+// };
 
 //
 // exports.get_preferred_flights_oneway = function(req,res){
