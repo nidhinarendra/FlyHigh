@@ -6,6 +6,28 @@ $(document).ready(function() {      //JQuery to drag and drop flights from one l
     $('#fav_flights').sortable({
         connectWith: '#chooseflights'
     });
+    // $('#datepicker').datepicker();
+    // $('#datePicker').datepicker({
+    //     inline: true,
+    //     iconsLibrary: 'fontawesome'
+    // });
+    //
+    // $('#datePicker1').datepicker({
+    //     inline: true,
+    //     iconsLibrary: 'fontawesome'
+    // });
+    // $('input[name="dater').daterangepicker();
+    //
+    //
+    // $('#datePicker').datepicker({
+    //     uiLibrary: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+    //     iconsLibrary: 'fontawesome'
+    // });
+    //
+    // $('#datePicker1').datepicker({
+    //     uiLibrary: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+    //     iconsLibrary: 'fontawesome'
+    // });
     resize();
     moveRight();
 });
