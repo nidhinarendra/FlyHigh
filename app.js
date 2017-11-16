@@ -23,6 +23,8 @@ var updateuser = require('./API/updateUser');
 var deleteuser = require('./API/deleteUser');
 var checklogin = require('./API/checklogin_service');
 var search_flights = require('./API/search_flights');
+var bookflight = require('./API/bookflight');
+
 app.use(
   expressSessions({
     secret: 'webarchitects',
@@ -73,6 +75,9 @@ app.post('/search_oneway',search_flights.get_flights_oneway);
 app.post('/search_twoway',search_flights.get_flights_twoway);
 app.post('/oneway_preferred',search_flights.get_preferred_flights_oneway);
 app.post('/twoway_preferred',search_flights.get_preferred_flights_twoway);
+app.post('/book_flight',bookflight.post_user_flight);       //Route to call when on-click book flight!
+app.post('/get_booking',bookflight.get_user_flight);        //Route to call when on-load booking confirmation and current-bookings tab
+
 // app.get('/getallusers',)
 
 //Internal Routes

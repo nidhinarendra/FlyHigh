@@ -27,7 +27,7 @@ exports.post_user_flight = function(req, res) {     //Service to post user and f
 
 exports.get_user_flight= function (req,res) {       //Service to receive user bookings, This service will be used by
                                                     // Current Bookings, History (navbar tabs) and confirmation page
-    mongo.connect(keys.mongoURI, function() {       
+    mongo.connect(keys.mongoURI, function() {
         var coll = mongo.collection('Bookings');
         coll.find({
             username: req.body.uername,
