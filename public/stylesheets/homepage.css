@@ -1,5 +1,4 @@
 body {
-  background-image: url('/images/homeimg.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -23,6 +22,11 @@ ul {
   margin-top: 150px;
   border: 1px solid red;
 }
+
+.search{
+  background-color: honeydew;
+}
+
 .img {
   width: 35px;
   length: 35px;
@@ -33,10 +37,10 @@ ul {
   padding-bottom: 0px;
   background: blue;
 }
-#field {
+.field {
   opacity:0.7;
-  margin-top: -80px;
-  margin-left: 80px;
+  /*margin-top: -80px;*/
+  /*margin-left: 80px;*/
   background-color: white;
 }
 #chooseflights,
@@ -46,10 +50,11 @@ ul {
   width: 400px;
   height: 350px;
   padding: 0.5em;
-  float: left;
+  /*float: left;*/
   margin: 10px;
   border: 1px solid red;
 }
+
 
 .draggable {
   z-index: 100;
@@ -80,6 +85,56 @@ ul {
 #welcome {
   position: absolute;
   margin-left: 30%;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #333;
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #6ac0e4;
+  border-color: #060c0e;
+}
+
+.jumbotron {
+  position:relative;
+  padding:50px;
+  margin-bottom: 0px;
+  opacity: 0.6;
+  color: #000000;
+  background: #000 url('/images/homeimg.jpg') center center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  top:0;left:0;
+  z-index:1;
+}
+
+.row-footer {
+  background-color: #AfAfAf;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
 }
 
 #flightgif {
