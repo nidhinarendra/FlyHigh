@@ -1,0 +1,268 @@
+body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+.ui-widget-header {
+    text-align: center;
+    font-size: 20px;
+}
+
+#body_bg{
+    z-index: initial;
+}
+
+strong.logo {
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: 100%;
+    width: 100px;
+    position: absolute;
+    height: 57px;
+    background-position: -2px -201px;
+    top:10px;
+    z-index: 5;
+}
+
+#logo{
+    /*color: #000;*/
+    z-index: 3;
+    position: fixed;
+    width: 150px;
+    height: 115px;
+    background: url("/images/airplane.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.img {
+    width: 35px;
+    length: 35px;
+}
+.ui-tabs .ui-tabs-panel {
+    display: block;
+    border-width: 0;
+    padding-bottom: 0px;
+    background: blue;
+}
+.field {
+    opacity:0.7;
+    /*margin-top: -80px;*/
+    /*margin-left: 80px;*/
+    background-color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #e1e0ef;
+    z-index: 2;
+}
+
+#nav_bar{
+    z-index: 2;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    z-index: 2;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+#nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #42b9f4;
+}
+
+#nav-pills>li.active>a:hover{
+    color: #000000;
+}
+
+#header a{
+
+    z-index: 2;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+#logout{
+    color: #fff;
+    background-color: #42b9f4;
+    border-color: #000000;
+}
+
+#logout:hover{
+    color: #000000;
+}
+
+#logo{
+    /*background-repeat: no-repeat;*/
+    z-index: 7;
+}
+
+#user{
+    color: #ffffff;
+    background-color: #42b9f4;
+    border-color: #000000;
+}
+
+#user:hover{
+    color: #000000;
+}
+
+.jumbotron {
+    position:relative;
+    padding:50px;
+    margin-bottom: 0px;
+    /*opacity: 0.6;*/
+    color: #FFFFFF;
+    background: #000 url('/images/jum.jpg') center center;
+    width: 100%;
+    height: 588px;
+    background-size: cover;
+    /*overflow: hidden;*/
+    top:0;left:0;
+    z-index:1;
+}
+
+.row-footer {
+    background-color: #000000;
+    /*width: 100%;*/
+    color: #ffffff;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 40px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 4px;
+    border-radius: 80%;
+    transition: all 1s;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: #000000;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+#main {
+    position: absolute;
+    top: 170px;
+}
+
+#resize {
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
+
+
+#pg2_title {
+    text-align: center;
+    padding: 10px 0;
+    color: #000;
+    font-family: "Arial Rounded MT Bold";
+}
+
+#two-way {
+    background: #525252;
+    color: #fff;
+    padding: 0 5%;
+    min-height: 75px;
+    width: 99.9%;
+    border: 0;
+}
+
+#two-way ul {
+    list-style: none;
+    height: 28px;
+    clear: both;
+}
+
+#two-way ul li {
+    float: left;
+    text-align: center;
+    width: 24%;
+    padding: 0;
+}
+#two-way ul li.plane-icon {
+    width: 50%;
+    padding: 3px 0 0;
+}
+#two-way .icon-whiteplane {
+    position: relative;
+    top: 25px;
+    left: 50%;
+    margin: 0 0 0 -10px;
+    z-index: 0;
+}
+.icon-whiteplane {
+    float: none;
+    width: 21px;
+    height: 21px;
+    margin: 10px;
+    background: transparent url('/images/plane-black-icon.png') 50% 50% no-repeat;
+    background-size: auto 100%;
+    display: block;
+}
+
+#view-details{
+    color: #42b9f4;
+}
+
+#airline_img{
+    width: 100px;
+    height: 100px;
+}
+#lab{
+    width:99.9%;
+}
+
+#book_button{
+    background-color: #42b9f4;
+    color: #FFFFFF;
+}
+#book_button:hover{
+    color: #000000;
+}
