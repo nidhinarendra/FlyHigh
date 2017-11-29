@@ -1,10 +1,10 @@
 
-var search_flight = angular.module('searchflight', []);
-search_flight.controller('searchflight', function($scope, $http) {
-    $scope.unexpected_error = true;
+var search_flight = angular.module('search_flight', []);
+search_flight.controller('searchf', function($scope, $http) {
+    // $scope.unexpected_error = true;
 
 
-    $scope.searchflight = function () {
+    $scope.search_flight = function () {
 
         if (($scope.oneway) && ($scope.preferred_flights != null)) {
             var data1_p = {

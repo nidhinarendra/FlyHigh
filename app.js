@@ -72,7 +72,8 @@ app.get('/userArray', getuser.get_user_details);
 //API calls for flights
 app.post('/search_oneway',search_flights.get_flights_oneway);
 app.post('/search_twoway',search_flights.get_flights_twoway);
-
+app.post('/oneway_preferred',search_flights.get_preferred_flights_oneway);
+app.post('/twoway_preferred',search_flights.get_preferred_flights_twoway);
 // app.get('/getallusers',)
 
 //Internal Routes

@@ -19,8 +19,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
-            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-    <script src="angularjs/homepage.js"></script>
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="/angularjs/homepage.js"></script>
   <script src="/otherjavascripts/homepage.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -74,7 +74,7 @@
 
 </head>
 
-<body id="body_bg">
+<body id="body_bg" ng-app="search_flight" ng-controller="searchf">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -160,19 +160,19 @@
     </div>
   </div>
 </div>
-
+<!--ng-submit="searchflight-->
 <div class="container" >
   <fieldset class="search">
-    <form method="post" ng-submit="searchflight()" name="searchflight" id="search_flight">
+    <form method="post" ng-submit="searchflight();" name="searchflight" id="search_flight">
       <div class="row row-content">
         <div class="col-md-3">
           <p>
             <div class="btn-group" data-toggle="buttons">
             <label class="btn active" id="oneway-btn" onclick= "hide_function()">
-                <input type="radio" id="one-way" /> One Way
+                <input type="radio" id="one-way" ng-model = "oneway" /> One Way
             </label>
             <label class="btn " id="twoway-btn" onclick= "show_function()">
-                    <input type="radio" id="round-trip" /> Round Trip
+                    <input type="radio" id="round-trip" ng-model = "twoway" /> Round Trip
             </label>
 
             </div>
@@ -182,7 +182,7 @@
 
       <div class="row">
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="From" id="source" required/>
+          <input type="text" class="form-control" placeholder="From" id="source" ng-model = "source" required/>
         </div>
         <div class="col-md-1">
           <button type="button" id="reverse" class="btn btn-md" onclick= "reverse_func()">
@@ -190,7 +190,7 @@
           </button>
         </div>
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="To" id="destination" required/>
+          <input type="text" class="form-control" placeholder="To" id="destination" ng-model = "destination" required/>
         </div>
       </div>
       <div class="row"></div>
@@ -199,7 +199,7 @@
         <div class="col-sm-3">
           <!--<div class="form-group">-->
           <!--<input type='text' class="form-control" id='datepicker' style='width: 300px;' > <br>-->
-          <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" id="travel_date" required/>
+          <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" id="travel_date" ng-model = "travel_date" required/>
           <!--<span class="glyphicon glyphicon-calendar"></span>-->
           <!--<div class='input-group date' id='datePicker1'>-->
           <!--<input type='text' class="form-control" />-->
@@ -213,7 +213,7 @@
         <div class="col-sm-3">
           <!--<div class="form-group">-->
           <!--<div class='input-group date' id="datePicker">-->
-          <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date" required/>
+          <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date" ng-model = "return_date" required/>
           <!--<span class="glyphicon glyphicon-calendar" style =' position: inherit;'></span>-->
           <!--<input type='text' class="form-control" />-->
           <!--<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span>-->
@@ -254,7 +254,7 @@
           <!--<div class="row">-->
           <!--<div class="col-md-6">-->
           <!--JQUERY UI widget==> Header used for better styled Headings-->
-          <ul id="fav_flights" title="Drop Your Favourite Airlines below" class="droppable"></ul>
+          <ul id="fav_flights" ng-model = "preferred_flights" title="Drop Your Favourite Airlines below" class="droppable"></ul>
           <!--</div>-->
           <!--</div>-->
           <!--</fieldset>-->
@@ -303,8 +303,8 @@
       <!--</fieldset>-->
       <!--</div>-->
       <!--</div>-->
-
-      <input type="submit" id="searchfli" class="btn" value = "Search Flights"/>
+      <!--ng-click="searchflight();"-->
+      <input type="submit"  id="searchfli" class="btn" value = "Search Flights">
     </form>
   </fieldset>
 </div>
