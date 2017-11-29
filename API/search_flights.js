@@ -204,6 +204,30 @@ exports.get_preferred_flights_twoway = function(req, res) {
 };
 
 
+
+
+// exports.show_preferred_flights = function(req, res) {
+//
+//     var source = req.body.source;
+//     var destination = req.body.destination;
+//     var travel_date = req.body.travel_date;
+//     var return_date = req.body.return_date;
+//     var user_preferred_flight = request.body.preferred_flights;
+//     for (i=0; i<user_preferred_flight.length;i++)
+//     {
+//         mongo.connect(keys.mongoURI, function () {
+//             var coll = mongo.collection('simulatedFlightData');
+//
+//             coll.find({
+//                 source: source,
+//                 destination:destination,
+//                 Date: travel_date,
+//                 Date: return_date
+//             })
+//         })
+// }
+
+
 // preferred_flights = function(coll, totalflights,preferred,i,source,destination,travel_date) {
 //     coll.find({
 //         source: source,

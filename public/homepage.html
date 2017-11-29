@@ -18,6 +18,10 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!--<script src="/angularjs/homepage.js"></script>-->
+  <script src="/angularjs/login.js"></script>
   <script src="/otherjavascripts/homepage.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -26,7 +30,7 @@
   <!--<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>-->
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-  <script src="angularjs/homepage.js"></script>
+  <script src="/otherjavascripts/homepage.js"></script>
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
 
@@ -68,9 +72,15 @@
   <!--});-->
   <!--</script>-->
 
+
 </head>
 
-<body id="body_bg" ng-app="searchflight" ng-controller="search_flight">
+<!--<<<<<<< HEAD-->
+<!--<body id="body_bg" ng-app="searchflight" ng-controller="search_flight">-->
+<!--=======-->
+<body id="body_bg" ng-app="login" ng-controller="searchf">
+      <!--ng-app="search_flight" ng-controller="searchf">-->
+<!--&gt;>>>>>> origin/sudha-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -107,28 +117,6 @@
   </div>
 </header>
 
-<!--<header class="jumbotron">-->
-<!--&lt;!&ndash; Main component for a primary marketing message or call to action &ndash;&gt;-->
-
-<!--<div class="container">-->
-<!--<div class="row row-header">-->
-<!--<div class="col-xs-12 col-sm-8">-->
-<!--<h1>FlyHigh!</h1>-->
-<!--<p style="padding:40px;"></p>-->
-<!--<p>Book cheapest flights and travel to your most favourite destinations dsfbsfnk sdfjbs kbfksdjf nskjf nknfkjdsn sdfnksfk cjncvkjnjv</p>-->
-<!--</div>-->
-<!--<div class="col-xs-12 col-sm-2">-->
-
-<!--<p style="padding:20px;"></p>-->
-<!--<img src="images/airplane.png" class="img-responsive">-->
-
-<!--</div>-->
-<!--&lt;!&ndash;<div class="col-xs-12 col-sm-2">&ndash;&gt;-->
-<!--&lt;!&ndash;<a type="button" class="btn btn-warning btn-block" data-toggle="tooltip" title="Or Call us at +852 12345678" data-placement="bottom" href="#reserveform">Reserve Table</a>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--</div>-->
-<!--</div>-->
-<!--</header>-->
 
 <div class="container" id="carousel_set">
   <div class="row row-content">
@@ -139,12 +127,11 @@
             <img class="img-responsive"
                  src="images/carousel1.jpeg" alt="Uthappizza">
             <div class="carousel-caption">
-              <!--<div class="row">-->
-              <!--<div class="col-md-6">-->
+
               <h2 id="carousel_h21">Thanksgiving BIG Sale<span class="label label-danger">New</span> <span class="badge">$499.99</span></h2>
               <p id="carousel_p1">Special airfares to destined cities all over the U.S. Limited offer available until November 22nd  </p>
               <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
-              <!--</div>-->
+
             </div>
           </div>
           <div class="item">
@@ -179,31 +166,52 @@
     </div>
   </div>
 </div>
-
+<!--ng-submit="searchflight-->
 <div class="container" >
   <fieldset class="search">
-    <form method="post" ng-submit="searchflight()" name="searchflight" id="search_flight">
+    <form method="post" ng-submit="searchflight();" name="searchflight" id="search_flight">
       <div class="row row-content">
         <div class="col-md-3">
           <p>
-          <ul class="nav nav-pills" id="nav-pills">
-            <li class="active" id="activenavpills">Round Trip</li>
-            <li>One-way</li>
-          </ul></p><br/>
+<!--<<<<<<< HEAD-->
+          <!--<ul class="nav nav-pills" id="nav-pills">-->
+            <!--<li class="active" id="activenavpills">Round Trip</li>-->
+            <!--<li>One-way</li>-->
+          <!--</ul></p><br/>-->
+<!--=======-->
+            <div class="btn-group" data-toggle="buttons">
+            <label class="btn active" id="oneway-btn" onclick= "hide_function()">
+                <input type="radio" id="one-way" ng-model = "oneway" /> One Way
+            </label>
+            <label class="btn " id="twoway-btn" onclick= "show_function()">
+                    <input type="radio" id="round-trip" ng-model = "twoway" /> Round Trip
+            </label>
+
+            </div>
+          </p><br/>
+<!--&gt;>>>>>> origin/sudha-->
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="From" ng-model ="source" id="source"/>
+<!--<<<<<<< HEAD-->
+          <!--<input type="text" class="form-control" placeholder="From" ng-model ="source" id="source"/>-->
+<!--=======-->
+          <input type="text" class="form-control" placeholder="From" id="source" ng-model = "source" required/>
+>>>>>>> origin/sudha
         </div>
         <div class="col-md-1">
-          <button type="button" id="transfer" class="btn btn-md">
+          <button type="button" id="reverse" class="btn btn-md" onclick= "reverse_func()">
             <span class="glyphicon glyphicon-transfer"></span>
           </button>
         </div>
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="To" ng-model = "destination" id="destination"/>
+<!--<<<<<<< HEAD-->
+          <!--<input type="text" class="form-control" placeholder="To" ng-model = "destination" id="destination"/>-->
+<!--=======-->
+          <input type="text" class="form-control" placeholder="To" id="destination" ng-model = "destination" required/>
+<!--&gt;>>>>>> origin/sudha-->
         </div>
       </div>
       <div class="row"></div>
@@ -212,7 +220,11 @@
         <div class="col-sm-3">
           <!--<div class="form-group">-->
           <!--<input type='text' class="form-control" id='datepicker' style='width: 300px;' > <br>-->
-          <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" ng-model = "travel_date" id="travel_date"/>
+<!--<<<<<<< HEAD-->
+          <!--<input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" ng-model = "travel_date" id="travel_date"/>-->
+<!--=======-->
+          <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" id="travel_date" ng-model = "travel_date" required/>
+<!--&gt;>>>>>> origin/sudha-->
           <!--<span class="glyphicon glyphicon-calendar"></span>-->
           <!--<div class='input-group date' id='datePicker1'>-->
           <!--<input type='text' class="form-control" />-->
@@ -226,7 +238,11 @@
         <div class="col-sm-3">
           <!--<div class="form-group">-->
           <!--<div class='input-group date' id="datePicker">-->
-          <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" ng-model = "return_date" id="return_date"/>
+<!--<<<<<<< HEAD-->
+          <!--<input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" ng-model = "return_date" id="return_date"/>-->
+<!--=======-->
+          <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date" ng-model = "return_date" required/>
+>>>>>>> origin/sudha
           <!--<span class="glyphicon glyphicon-calendar" style =' position: inherit;'></span>-->
           <!--<input type='text' class="form-control" />-->
           <!--<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span>-->
@@ -316,11 +332,16 @@
       <!--</fieldset>-->
       <!--</div>-->
       <!--</div>-->
+<!--<<<<<<< HEAD-->
 
 
 
 
-      <label id="searchfli" class="btn"><input type="submit" value = "Search Flights"/></label>
+      <!--<label id="searchfli" class="btn"><input type="submit" value = "Search Flights"/></label>-->
+<!--=======-->
+      <!--ng-click="searchflight();"-->
+      <input type="submit"  id="searchfli" class="btn" value = "Search Flights">
+>>>>>>> origin/sudha
     </form>
   </fieldset>
 </div>

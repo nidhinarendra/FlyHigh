@@ -126,11 +126,11 @@ strong.logo {
 
 .navbar-inverse .navbar-nav>li>a {
   color: #e1e0ef;
-  z-index: 2;
+  z-index: 3;
 }
 
 #nav_bar{
-  z-index: 2;
+  z-index: 3;
 }
 
 .navbar-nav>li>a {
@@ -192,9 +192,31 @@ strong.logo {
   color: #000000;
 }
 
-#transfer{
+#oneway-btn{
+  color: #FFFFFF;
+  background-color: #cdd1d3;
+}
+
+#oneway-btn.focus{
+  color: #FFFFFF;
+  background-color: #42b9f4;
+}
+
+#twoway-btn{
+  color: #FFFFFF;
+  background-color: #cdd1d3;
+}
+#twoway-btn.focus{
+  color: #FFFFFF;
+  background-color: #42b9f4;
+}
+
+#reverse{
   background-color: #42b9f4;
   color: #fff;
+}
+#reverse:hover{
+  color: #000000;
 }
 
 #transfer:hover{
