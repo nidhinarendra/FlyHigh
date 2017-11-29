@@ -22,7 +22,7 @@ var getuser = require('./API/getUser');
 var updateuser = require('./API/updateUser');
 var deleteuser = require('./API/deleteUser');
 var checklogin = require('./API/checklogin_service');
-
+var search_flights = require('./API/search_flights');
 app.use(
   expressSessions({
     secret: 'webarchitects',
@@ -68,6 +68,10 @@ app.get('/users', getuser.get_user_details);
 app.get('/adminhome', routes.adminhome);
 app.post('/checkadminlogin', checklogin.checkadminLogin);
 app.get('/userArray', getuser.get_user_details);
+
+//API calls for flights
+app.post('/search_oneway',search_flights.get_flights_oneway);
+app.post('/search_twoway',search_flights.get_flights_twoway);
 
 // app.get('/getallusers',)
 
