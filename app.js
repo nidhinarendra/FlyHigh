@@ -56,7 +56,7 @@ if ('development' == app.get('env')) {
 }
 //RESTful API call Routes
 app.post('/register', registerService.create_a_user);
-app.post('/checklogin', checklogin.checkLogin);
+app.post('/checklogin', checklogin.checkLogin); //Checklogin_service.checkLogin
 app.get('/login', login.login);
 app.get('/home', routes.home);
 

@@ -1,5 +1,4 @@
 body {
-  background-image: url('/images/homeimg.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -23,6 +22,45 @@ ul {
   margin-top: 150px;
   border: 1px solid red;
 }
+
+#body_bg{
+  z-index: initial;
+}
+
+.search{
+  background-color: #eaf8ff;
+  margin-bottom: 20px;
+  z-index: -2;
+}
+
+strong.logo {
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: 100%;
+  width: 100px;
+  position: absolute;
+  height: 57px;
+  background-position: -2px -201px;
+  top:10px;
+  z-index: 5;
+}
+
+#logo{
+  /*color: #000;*/
+  z-index: 3;
+  position: fixed;
+  width: 150px;
+  height: 115px;
+  background: url("/images/airplane.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  /*background-image: url('/images/airplane.png');*/
+  /*background-repeat: no-repeat;*/
+  /*background-color: transparent;*/
+}
+
+
 .img {
   width: 35px;
   length: 35px;
@@ -33,10 +71,10 @@ ul {
   padding-bottom: 0px;
   background: blue;
 }
-#field {
+.field {
   opacity:0.7;
-  margin-top: -80px;
-  margin-left: 80px;
+  /*margin-top: -80px;*/
+  /*margin-left: 80px;*/
   background-color: white;
 }
 #chooseflights,
@@ -46,9 +84,13 @@ ul {
   width: 400px;
   height: 350px;
   padding: 0.5em;
-  float: left;
+  /*float: left;*/
   margin: 10px;
   border: 1px solid red;
+}
+
+#activenavpills{
+  background-color: #42b9f4;
 }
 
 .draggable {
@@ -80,6 +122,188 @@ ul {
 #welcome {
   position: absolute;
   margin-left: 30%;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #e1e0ef;
+  z-index: 2;
+}
+
+#nav_bar{
+  z-index: 2;
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  z-index: 2;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+#nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #42b9f4;
+}
+
+#nav-pills>li.active>a:hover{
+  color: #000000;
+}
+
+#header a{
+
+  z-index: 2;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+#logout{
+  color: #fff;
+  background-color: #42b9f4;
+  border-color: #000000;
+}
+
+#logout:hover{
+  color: #000000;
+}
+
+#logo{
+  /*background-repeat: no-repeat;*/
+  z-index: 7;
+}
+
+#user{
+  color: #ffffff;
+  background-color: #42b9f4;
+  border-color: #000000;
+}
+
+#user:hover{
+  color: #000000;
+}
+
+#transfer{
+  background-color: #42b9f4;
+  color: #fff;
+}
+
+#transfer:hover{
+  color: #000000;
+}
+
+#carousel_set{
+  height: 50%;
+  background-color: transparent;
+  /*max-width: 2000px;*/
+  width: 98%;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1;
+  color: #ffffff;
+}
+
+#carousel_h21{
+  color: #ffffff;
+}
+#carousel_p1{
+  color: #ffffff;
+}
+#carousel_h22{
+  color: #ffffff;
+}
+#carousel_p2{
+  color: #ffffff;
+}
+
+
+#search_flight{
+  width: 98%;
+  position: relative;
+}
+
+#searchfli{
+  background-color: #42b9f4;
+  color: #fff;
+  /*z-index: -3;*/
+}
+
+#searchfli:hover{
+  color: #000000;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #42b9f4;
+}
+
+.jumbotron {
+  position:relative;
+  padding:50px;
+  margin-bottom: 0px;
+  /*opacity: 0.6;*/
+  color: #FFFFFF;
+  background: #000 url('/images/jum.jpg') center center;
+  width: 100%;
+  height: 588px;
+  background-size: cover;
+  /*overflow: hidden;*/
+  top:0;left:0;
+  z-index:1;
+}
+
+.row-footer {
+  background-color: #000000;
+  /*width: 100%;*/
+  color: #ffffff;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 40px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 4px;
+  border-radius: 80%;
+  transition: all 1s;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  color: #000000;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
 
 #flightgif {

@@ -203,6 +203,7 @@ exports.get_preferred_flights_twoway = function(req, res) {
     }
 };
 
+
 // preferred_flights = function(coll, totalflights,preferred,i,source,destination,travel_date) {
 //     coll.find({
 //         source: source,
@@ -608,3 +609,62 @@ exports.get_preferred_flights_twoway = function(req, res) {
 //     database : 'login',
 //     port : 3306
 // });
+
+
+exports.get_preferred_flights_twoway = function(req,res) {
+    console.log(Object.keys(req));
+    var preferred = req.body.preferred_flights;
+    var source = req.body.source;
+    var destination = req.body.destination;
+    var travel_date = req.body.travel_date;
+    var return_date = req.body.return_date;
+    var totalflights = [];
+    var i = 0;
+    mongo.connect(keys.mongoURI, function () {
+        var coll = mongo.collection('simulatedFlightData');
+        var preferred_outgoing = preferred_flights(totalflights, preferred, i, source, destination, travel_date);
+        coll.find({source: source, destination: destination, Date: travel_date}).toArray(function (err, other_outgoing) {
+
+            if (err) throw err;
+            // console.log(result);
+            for (var j = 0; j <= reply.length; j++) {
+                var i = other_outgoing.indexOf(preferred_outgoing[j]);
+                if (i != -1) {
+                    other_outgoing.splice(i, 1);
+                }
+            }
+            getreturnflights(preferred_outgoing,other_outgoing)
+            // json_response = {
+            //     preferredflights: reply,
+            //     otherflights: result
+            // };
+            // console.log("hi" + json_response);
+            // res.send(json_response);
+        });
+    });
+
+    getreturnflights = function(preferred_outgoing,other_outgoing) {
+        mongo.connect(keys.mongoURI, function () {
+            var coll = mongo.collection('simulatedFlightData');
+            var returnpreferred = preferred_flights(totalflights, preferred, i, destination, source, return_date);
+            coll.find({
+                source: destination,
+                destination: source,
+                Date: return_date
+            }).toArray(function (error, otherreturnflights) {
+                if (error) throw error;
+                // console.log(result);
+                json_response = {
+                    preferred_outgoing: preferred_outgoing,
+                    other_outgoing: other_outgoing,
+                    preferred_return: returnpreferred,
+                    other_return: otherreturnflights
+                };
+                res.send(json_response);
+
+            });
+        });
+    }
+};
+
+
