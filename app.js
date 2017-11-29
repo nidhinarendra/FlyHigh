@@ -1,4 +1,4 @@
-/**
+ /**
  * Module dependencies.
  */
 
@@ -60,6 +60,7 @@ app.post('/checklogin', checklogin.checkLogin); //Checklogin_service.checkLogin
 app.get('/login', login.login);
 app.get('/home', routes.home);
 
+
 app.delete('/deleteuser/:email', deleteuser.delete_a_user);
 app.put('/updateuser/:username', updateuser.update_a_user);
 app.get('/getuser/:username', getuser.get_user_details);
@@ -91,6 +92,8 @@ app.get('/logout', function(req, res) {
   // window.location.assign('/login');
   res.redirect('/login');
 });
+
+
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

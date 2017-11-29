@@ -119,7 +119,7 @@ app.controller('searchflight', function($scope, $http) {
                     source: $scope.source,
                     destination: $scope.destination,
                     travel_date: Sscope.travel_date,
-                    return_date: $scope.return_da te
+                    return_date: $scope.return_date
                 };
                 $http({
                     method: 'POST',       //Using http method POST
