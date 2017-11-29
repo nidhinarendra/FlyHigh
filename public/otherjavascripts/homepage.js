@@ -1,3 +1,7 @@
+// $(document).onload(function () {
+//     $("#return_date").show();
+// });
+
 
 $(document).ready(function() {      //JQuery to drag and drop flights from one list to another.
     $('#chooseflights').sortable({  //Used JQuery UI Widget (Sortable List)
@@ -5,6 +9,10 @@ $(document).ready(function() {      //JQuery to drag and drop flights from one l
     });
     $('#fav_flights').sortable({
         connectWith: '#chooseflights'
+    });
+    $('#oneway-btn').style({
+        color: '#FFFFFF',
+        background: '#42b9f4'
     });
     // $('#datepicker').datepicker();
     // $('#datePicker').datepicker({
@@ -28,6 +36,9 @@ $(document).ready(function() {      //JQuery to drag and drop flights from one l
     //     uiLibrary: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
     //     iconsLibrary: 'fontawesome'
     // });
+    reverse_func();
+    show_function();
+    hide_function();
     resize();
     moveRight();
 });
@@ -41,4 +52,20 @@ function moveRight(){               //Animates the flight GIF from left to right
     $("#flightgif").animate({left: "+=1440"},10800,'linear',function () {
         moveRight();
     });
+}
+
+function show_function() {
+    $("#return_date").show();          //Shows the return date picker for round-trip
+}
+
+function hide_function() {
+    $("#return_date").hide();           //Hides return date picker for one-way
+}
+
+
+//Reverse source and destination values
+function reverse_func() {
+    var temp = document.getElementById("source").value;
+    document.getElementById("source").value = document.getElementById("destination").value;
+    document.getElementById("destination").value = temp;
 }
