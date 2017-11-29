@@ -6,7 +6,7 @@ app.config(function($routeProvider)
     $routeProvider
         .when("/search", {
             templateUrl : "flight_search.htm",
-            controller : "searchflight"      //to be edited later
+            controller : "search_flight"      //to be edited later
         })
 
 app.controller('searchflight', function($scope, $http) {
@@ -55,8 +55,7 @@ app.controller('searchflight', function($scope, $http) {
                 var data1_np = {
                     source: $scope.source,
                     destination: $scope.destination,
-                    travel_date: Sscope.travel_date,
-
+                    travel_date: Sscope.travel_date
                 };
                 $http({
                     method: 'POST',       //Using http method POST
@@ -104,9 +103,9 @@ app.controller('searchflight', function($scope, $http) {
                             $scope.unexpected_error = true;
                         } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
                             //window.location.assign('/confirmation');
-                            $scope.source = response.source
-                            $scope.destination = response.destination
-                            $scope.price = response.price
+                            $scope.source = response.source;
+                            $scope.destination = response.destination;
+                            $scope.price = response.price;
                         }
                     })
                     .error(function (error) {
