@@ -126,11 +126,11 @@ strong.logo {
 
 .navbar-inverse .navbar-nav>li>a {
   color: #e1e0ef;
-  z-index: 2;
+  z-index: 3;
 }
 
 #nav_bar{
-  z-index: 2;
+  z-index: 3;
 }
 
 .navbar-nav>li>a {

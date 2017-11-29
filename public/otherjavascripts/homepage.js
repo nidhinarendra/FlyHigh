@@ -10,10 +10,11 @@ $(document).ready(function() {      //JQuery to drag and drop flights from one l
     $('#fav_flights').sortable({
         connectWith: '#chooseflights'
     });
-    $('#oneway-btn').style({
-        color: '#FFFFFF',
-        background: '#42b9f4'
-    });
+    // $('#oneway-btn').style({
+    //     color: '#FFFFFF',
+    //     background: '#42b9f4'
+    // });
+
     // $('#datepicker').datepicker();
     // $('#datePicker').datepicker({
     //     inline: true,
@@ -59,7 +60,7 @@ function show_function() {
 }
 
 function hide_function() {
-    $("#return_date").hide();           //Hides return date picker for one-way
+    $("#return_date").hide().prop('required',false);           //Hides return date picker for one-way
 }
 
 

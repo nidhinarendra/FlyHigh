@@ -53,7 +53,7 @@ search_flight.controller('searchflight', function($scope, $http) {
 
                         $scope.unexpected_error = true;
                     } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
-                        window.location.assign('/confirmation');
+                        window.location.assign('/flights_search');
                     }
                 })
                 .error(function (error) {
@@ -95,7 +95,7 @@ search_flight.controller('searchflight', function($scope, $http) {
                 source: $scope.source,
                 destination: $scope.destination,
                 travel_date: Sscope.travel_date,
-                return_date: $scope.return_da te
+                return_date: $scope.return_date
             };
             $http({
                 method: 'POST',       //Using http method POST

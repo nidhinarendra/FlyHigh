@@ -18,6 +18,9 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="angularjs/homepage.js"></script>
   <script src="/otherjavascripts/homepage.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -168,9 +171,10 @@
             <label class="btn active" id="oneway-btn" onclick= "hide_function()">
                 <input type="radio" id="one-way" /> One Way
             </label>
-            <label class="btn" id="twoway-btn" onclick= "show_function()">
+            <label class="btn " id="twoway-btn" onclick= "show_function()">
                     <input type="radio" id="round-trip" /> Round Trip
-                </label>
+            </label>
+
             </div>
           </p><br/>
         </div>
@@ -300,10 +304,7 @@
       <!--</div>-->
       <!--</div>-->
 
-
-
-
-      <button type="button" id="searchfli" class="btn ">Search Flights</button>
+      <input type="submit" id="searchfli" class="btn" value = "Search Flights"/>
     </form>
   </fieldset>
 </div>
