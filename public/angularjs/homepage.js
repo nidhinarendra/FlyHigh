@@ -9,7 +9,7 @@ app.config(function($routeProvider)
             controller : "search_flight"      //to be edited later
         })
 
-app.controller('searchflight', function($scope, $http) {
+app.controller('search_flight', function($scope, $http) {
     $scope.unexpected_error = true;
 
 
