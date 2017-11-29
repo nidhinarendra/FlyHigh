@@ -195,7 +195,7 @@
 
       <div class="row">
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="From" id="source"/>
+          <input type="text" class="form-control" placeholder="From" ng-model ="source" id="source"/>
         </div>
         <div class="col-md-1">
           <button type="button" id="transfer" class="btn btn-md">
@@ -203,7 +203,7 @@
           </button>
         </div>
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="To" id="destination"/>
+          <input type="text" class="form-control" placeholder="To" ng-model = "destination" id="destination"/>
         </div>
       </div>
       <div class="row"></div>
@@ -212,7 +212,7 @@
         <div class="col-sm-3">
           <!--<div class="form-group">-->
           <!--<input type='text' class="form-control" id='datepicker' style='width: 300px;' > <br>-->
-          <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" id="travel_date"/>
+          <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" ng-model = "travel_date" id="travel_date"/>
           <!--<span class="glyphicon glyphicon-calendar"></span>-->
           <!--<div class='input-group date' id='datePicker1'>-->
           <!--<input type='text' class="form-control" />-->
@@ -226,7 +226,7 @@
         <div class="col-sm-3">
           <!--<div class="form-group">-->
           <!--<div class='input-group date' id="datePicker">-->
-          <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date"/>
+          <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" ng-model = "return_date" id="return_date"/>
           <!--<span class="glyphicon glyphicon-calendar" style =' position: inherit;'></span>-->
           <!--<input type='text' class="form-control" />-->
           <!--<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span>-->
@@ -267,7 +267,7 @@
           <!--<div class="row">-->
           <!--<div class="col-md-6">-->
           <!--JQUERY UI widget==> Header used for better styled Headings-->
-          <ul id="fav_flights" title="Drop Your Favourite Airlines below" class="droppable"></ul>
+          <ul id="fav_flights" ng-model = "preferred_flights" title="Drop Your Favourite Airlines below" class="droppable"></ul>
           <!--</div>-->
           <!--</div>-->
           <!--</fieldset>-->
@@ -320,7 +320,7 @@
 
 
 
-      <button type="button" id="searchfli" class="btn ">Search Flights</button>
+      <label id="searchfli" class="btn"><input type="submit" value = "Search Flights"/></label>
     </form>
   </fieldset>
 </div>
