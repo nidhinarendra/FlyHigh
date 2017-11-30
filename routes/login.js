@@ -1,6 +1,10 @@
 exports.login = function(req, res) {
   res.sendfile('public/login.html');
 };
+exports.flightSearch = function(req, res) {
+    res.sendfile('public/flightssearch.html');
+};
+
 
 exports.redirectToHomepage = function(req, res) {
   if (req.session_express.email && req.session_express.name) {

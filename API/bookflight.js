@@ -2,7 +2,7 @@ const keys = require('../config/keys');
 var mongo = require('./mongo');
 /*-------------------------------Working-------------------------------*/
 console.log("inside book_flights");
-exports.post_user_flight = function(req, res) {     //Service to post user and flights data from flights_search.html
+exports.post_user_flight = function(req, res) {     //Service to post user and flights data from flightssearch.html
 
     var save_data = {
         username: req.body.uername,
