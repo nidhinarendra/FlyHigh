@@ -3,6 +3,8 @@ console.log('Inside login.js');
 var login = angular.module('login', []);
 
 login.controller('login', function($scope, $http) {
+
+    // $scope.user = sessionStorage.getItem("emp-key");
   $scope.invalid_login = true;
   $scope.unexpected_error = true;
   console.log('Inside login');
@@ -88,6 +90,22 @@ login.controller('login', function($scope, $http) {
       });
   };
 
+  $scope.displayuser = function () {
+      $scope.user = sessionStorage.getItem('username');
+  };
+
+  $scope.logout = function () {
+      $http({
+          method: 'GET',
+          url: '/logout'
+      }).success(function(){
+          console.log('successfully Logged Out');
+          window.location.assign('/login');
+      })
+  };
+
+  // $scope.user = sessionStorage.getItem('username');
+
   $scope.searchf = function () {
       console.log('Inside searchflight function');
       var data1_np = {
@@ -111,6 +129,7 @@ login.controller('login', function($scope, $http) {
               } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
                   window.location.assign('/flightssearch');
                   console.log('delivering flights');
+                  $scope.bookf
               }
           })
           .error(function (error) {
@@ -237,6 +256,11 @@ login.controller('login', function($scope, $http) {
       //               $scope.unexpected_error = false;
       //           });
       //   }
+  };
+
+  $scope.bookf = function () {
+    console.log('Inside searchflight function');
+
   };
 
 });

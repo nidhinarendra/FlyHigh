@@ -1,6 +1,7 @@
 exports.login = function(req, res) {
   res.sendfile('public/login.html');
 };
+
 exports.flightSearch = function(req, res) {
     res.sendfile('public/flightssearch.html');
 };
