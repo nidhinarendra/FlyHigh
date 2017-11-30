@@ -7,16 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>FlyHigh!</title>
-  <!--Bootstrap-->
-  <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-  <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet">-->
-  <!--<link href="css/mystyles.css" rel="stylesheet">-->
-  <!--<link href="css/font-awesome.min.css" rel="stylesheet">-->
-  <!--<link href="css/bootstrap-social.css" rel="stylesheet">-->
-  <!--HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
-  <!--WARNING: Respond.js doesn't work if you view the page via file://-->
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
             src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -25,9 +15,6 @@
   <script src="/otherjavascripts/homepage.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
-  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>-->
-  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>-->
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
   <script src="/otherjavascripts/homepage.js"></script>
@@ -48,34 +35,9 @@
   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- jQuery -->
-
-
-  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>-->
-  <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />-->
-  <!--<script>-->
-  <!--$(document).ready(function() {-->
-  <!--$('#datePicker').datepicker({-->
-  <!--uiLibrary: 'ttps://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',-->
-  <!--iconsLibrary: 'fontawesome'-->
-  <!--});-->
-
-  <!--$('#datePicker1').datepicker({-->
-  <!--uiLibrary: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',-->
-  <!--iconsLibrary: 'fontawesome'-->
-  <!--});-->
-  <!--});-->
-  <!--</script>-->
-  <!--Script to load the ajax tabs in the homepage-->
-  <!--<script>-->
-  <!--$(function() {-->
-  <!--$('#tabs').tabs();-->
-  <!--});-->
-  <!--</script>-->
-
-
 </head>
 
-<body id="body_bg" ng-app="login" ng-controller="searchf">
+<body id="body_bg" ng-app="searchFlight" ng-controller="searchFlight">
       <!--ng-app="search_flight" ng-controller="searchf">-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
   <div class="navbar-header">
@@ -199,27 +161,12 @@
       <br />
       <div class="row">
         <div class="col-sm-3">
-          <!--<div class="form-group">-->
-          <!--<input type='text' class="form-control" id='datepicker' style='width: 300px;' > <br>-->
           <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" id="travel_date" ng-model = "travel_date" required/>
-          <!--<span class="glyphicon glyphicon-calendar"></span>-->
-          <!--<div class='input-group date' id='datePicker1'>-->
-          <!--<input type='text' class="form-control" />-->
-          <!--<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>-->
-          <!--</span>-->
-          <!--</div>-->
         </div>
-        <!--</div>-->
         <div class="col-md-1">
         </div>
         <div class="col-sm-3">
-          <!--<div class="form-group">-->
-          <!--<div class='input-group date' id="datePicker">-->
           <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date" ng-model = "return_date" required/>
-          <!--<span class="glyphicon glyphicon-calendar" style =' position: inherit;'></span>-->
-          <!--<input type='text' class="form-control" />-->
-          <!--<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span>-->
-          <!--</span>-->
         </div>
       </div>
       <br/>
@@ -227,12 +174,7 @@
         <div class="col-md-6">
           Pick your preferred Airlines below
           <!--The list of Flights to be chosen by the user as preferred flights for priortized flight suggestions in the future    -->
-          <!--<fieldset class="field">-->
-          <!--<legend> Pick your preferred Airlines below</legend>-->
 
-          <!--<div class="row">-->
-          <!--<div class="col-md-6">-->
-          <!--Implementing drag and drop-->
           <ul id="chooseflights" title="Pick your preferred Airlines below">
             <li class="draggable"><img class="img" src="/images/American.jpg"/>American Airlines</li>
             <li class="draggable"><img class="img" src="/images/jetblue.jpeg"/>JetBlue</li>
@@ -245,67 +187,15 @@
             <li class="draggable"><img class="img" src="/images/elite.jpeg"/>Elite Airlines</li>
             <li class="draggable"><img class="img" src="/images/usajet.jpeg"/>USA jet Airlines</li>
           </ul>
-          <!--</div>-->
-          <!--</div>-->
-          <!--</fieldset>-->
         </div>
         <div class="col-md-6">
           <!--The flights are to be dropped in this fieldset by the user-->
           Drop Your Favourite Airlines below        <!--<fieldset class="field">-->
-          <!--<legend>Drop Your Favourite Airlines below</legend>-->
-          <!--<div class="row">-->
-          <!--<div class="col-md-6">-->
+
           <!--JQUERY UI widget==> Header used for better styled Headings-->
           <ul id="fav_flights" ng-model = "preferred_flights" title="Drop Your Favourite Airlines below" class="droppable"></ul>
-          <!--</div>-->
-          <!--</div>-->
-          <!--</fieldset>-->
         </div>
       </div>
-      <!--</form>-->
-      <!--</div>-->
-      <!--<br/><br/><br/><br/><br/><br/>-->
-      <!--<div class="row">-->
-      <!--<div class="col-md-6">-->
-
-      <!--&lt;!&ndash;The list of Flights to be chosen by the user as preferred flights for priortized flight suggestions in the future    &ndash;&gt;-->
-      <!--<fieldset id="field">-->
-      <!--<legend class="ui-widget-header">Pick your preferred Airlines below</legend>-->
-
-      <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-      <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-      <!--&lt;!&ndash;Implementing drag and drop&ndash;&gt;-->
-      <!--<ul id="chooseflights">-->
-      <!--<li class="draggable"><img class="img" src="/images/American.jpg"/>American Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/jetblue.jpeg"/>JetBlue</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/united.jpeg"/>United Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/Southwest.jpeg"/>Southwest Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/Alaska.jpeg"/>Alaska Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/Delta.jpeg"/>Delta Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/virgin.jpeg"/>Virgin Atlantic Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/Capeair.jpeg"/>Cape Air</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/elite.jpeg"/>Elite Airlines</li>-->
-      <!--<li class="draggable"><img class="img" src="/images/usajet.jpeg"/>USA jet Airlines</li>-->
-      <!--</ul>-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-      <!--</fieldset>-->
-      <!--</div>-->
-      <!--<div class="col-md-6">-->
-      <!--&lt;!&ndash;The flights are to be dropped in this fieldset by the user&ndash;&gt;-->
-
-      <!--<fieldset id="field">-->
-      <!--<legend class="ui-widget-header">Drop Your Favourite Airlines below</legend>-->
-      <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
-      <!--&lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
-      <!--&lt;!&ndash;JQUERY UI widget==> Header used for better styled Headings&ndash;&gt;-->
-      <!--<ul id="fav_flights" class="droppable"></ul>-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--</fieldset>-->
-      <!--</div>-->
-      <!--</div>-->
-      <!--ng-click="searchflight();"-->
       <input type="submit"  id="searchfli" class="btn" value = "Search Flights">
     </form>
   </fieldset>
