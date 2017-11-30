@@ -6,7 +6,7 @@ console.log('Inside homepage.js');
 // login.controller('login', function($scope, $http) {
 // =======
 var searchFlight = angular.module('searchFlight', []);
-// >>>>>>> origin/sudha
+
 searchFlight.controller('searchFlight', function($scope, $http) {
     // $scope.unexpected_error = true;
     // window.alert('Invalid entry');
@@ -14,15 +14,6 @@ searchFlight.controller('searchFlight', function($scope, $http) {
     $scope.searchflight = function () {
         console.log('Inside searchflight function');
 
-// <<<<<<< HEAD
-//         $http({
-//             method: 'GET',
-//             url: '/flightssearch',
-//             headers: { 'Content-Type': 'application/json' }
-//         }).success( function (data) {
-//             console.log(data);
-//             window.location.assign('/flightssearch');
-// =======
 
     $scope.searchflight = function () {
 
