@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="V-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>FlyHigh!</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!--<script src="/angularjs/homepage.js"></script>-->
+    <script src="/angularjs/login.js"></script>
     <script src="/otherjavascripts/homepage.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>-->
-    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>-->
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script src="/otherjavascripts/homepage.js"></script>
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
 
@@ -26,15 +29,17 @@
     <script src='/otherjavascripts/CDN/bootstrap-datepicker.min.js' type='text/javascript'></script>
 
     <!--Internal Stylesheets-->
-    <link rel="stylesheet" href="/stylesheets/confirmationpage.css">
+    <link rel="stylesheet" href="/stylesheets/homepage.css">
     <!--External Stylesheets-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery -->
+
 </head>
 
-<body id="body_bg">
+<body id="body_bg" ng-app="login" ng-controller="searchf">
+<!--ng-app="search_flight" ng-controller="searchf">-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -61,7 +66,6 @@
     </div>
 </nav>
 
-
 <!--Fixed logo at the center of page--->
 <header id="header">
     <div class="header-wrapper" >
@@ -71,12 +75,285 @@
     </div>
 </header>
 
+<header class="jumbotron" id="jumbotron">
+    <!--<video id="video-background" preload="" muted="" autoplay="" loop="">-->
+    <!--<source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">-->
+    <!--<source src="/images/airplane-animation1.mp4" type="video/mp4">-->
+    <!--<source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">-->
+    <!--</video>-->
+    <div class="container">
+        <div class="row row-header">
+            <div class="col-xs-12 col-sm-8">
+                <h1>FlyHigh!</h1>
+                <p style="padding:10px;"></p>
+                <p>Book cheapest flights and travel to your most<br/> favourite destinations</p>
+            </div>
+        </div>
+    </div>
+</header>
 
 
+<!---Pre-fill user details---->
+<div class="container" id="cont">
+    </br>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="panel panel-default">
+                <!--<div class="row display-tr" >-->
+                <!--<h3 class="panel-title display-td" >Passenger Details</h3>-->
+                <h3><div class="panel-heading">Passenger details </div></h3>
+                <div class="panel-body">
+                    <!--<div class="row">-->
+                    <form method="get">
+                        <div id="inlinedisplay">
+                            <!--<div class="row">-->
+                            <input type="text" name = "firstname" id="firstname" placeholder="First Name" required>
 
+                            <input type="text" name = "lastname" id="lastname" placeholder="Last Name" required>
+                            </br> </br>
+                            <!--</div>-->
+                        </div>
 
+                        <!--<div class="row">-->
+                        <input type="email" name = "email" id="email" placeholder="email id" required>
+                        </br> </br>
+                        <!--</div>-->
 
+                        <!--<div class="row">-->
+                        <label for="gender"> Gender:</label></br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male"> Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female"> Female</label>
+                        </br> </br>
+                        <!--</div>-->
 
+                        <!--<div class="row">-->
+                        <label for="DOB"> Date of birth:</label> <input type="date" id="birthday" name="birthday">
+                        </br> </br>
+                        <!--</div>-->
+
+                        <!--<div class="row">-->
+                        <label for="phone_number"> Phone number: </label> <input type="tel" name = "phone" id="phone" >
+                        </br> </br>
+                        <!--</div>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----END OF pre-fill passenger details form--->
+
+    <!--Start of Travel details--->
+
+    <h3>Selected flights</h3>
+    <!----Accordion ONE for Travel flight---->
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <!---START Flight fetch---->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="airline_img" id="airline_img">
+                            <img src="/images/American1.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>CLT  -  SAN</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2><span class="label label-info">$678</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <span class="flight-id"><h4>AA 6079</h4></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>08:05     14:30</p>
+                    </div>
+                    <!--<div class="col-sm-4">-->
+                    <!--<p><button class="btn success" id="book_button"></button></p>-->
+                    <!--</div>-->
+                </div>
+                <span class="label label-warning">2 seats left</span>
+                <br/>
+                <br/>
+                <!---END Flight fetch--->
+                <h4 class="panel-title" id="view-details">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        View Details</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>
+                        0805 (CLT) - 1430 (SAN)<br>
+                        Estimated flight time: 3 Hours 25 Minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <!---START Flight fetch---->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="airline_img" id="airline_img">
+                            <img src="/images/virgin1.jpeg" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>SAN  -  CLT</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2><span class="label label-info">$456</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <span class="flight-id"><h4>Virgin America 1938</h4></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>08:05     14:30</p>
+                    </div>
+                    <!--<div class="col-sm-4">-->
+                    <!--<p><button class="btn success" id="book_button">Book Now</button></p>-->
+                    <!--</div>-->
+                </div>
+                <span class="label label-warning">5 seats left</span>
+                <br/>
+                <br/>
+
+                <!---END Flight fetch--->
+                <h4 class="panel-title" id="view-details">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        View Details</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        0805 (SAN) - 1430 (CLT)<br>
+                        Estimated flight time: 3 Hours 25 Minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!----END Accordion ONE for Travel flight---->
+
+    <!---End of Travel details---->
+
+    <!-- CREDIT CARD FORM STARTS HERE -->
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="panel panel-default credit-card-box" id="credit-card-box">
+                <div class="panel-heading display-table" >
+                    <div class="row display-tr" >
+                        <h3 class="panel-title display-td" >Payment Details</h3>
+                        <div class="display-td" >
+                            <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form" id="payment-form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="Total-amount">TOTAL AMOUNT</label>
+                                    <input type="text"/>
+                                    </br></br>
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input
+                                                type="tel"
+                                                class="form-control"
+                                                name="cardNumber"
+                                                placeholder="Valid Card Number"
+                                                autocomplete="cc-number"
+                                                required autofocus
+                                        />
+                                        <!--<span class="glyphicon glyphicon-credit-card"></span>-->
+                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input
+                                            type="tel"
+                                            class="form-control"
+                                            name="cardExpiry"
+                                            placeholder="MM / YY"
+                                            autocomplete="cc-exp"
+                                            required
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cardCVC">CV CODE</label>
+                                    <input
+                                            type="tel"
+                                            class="form-control"
+                                            name="cardCVC"
+                                            placeholder="CVC"
+                                            autocomplete="cc-csc"
+                                            required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- Trigger the modal with a button -->
+                                <button class="btn btn-success btn-lg btn-block" type="submit" data-toggle="modal" data-target="#myModal">Confirm Booking</button>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- CREDIT CARD FORM ENDS HERE -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title">Your trip is confirmed!</h1>
+            </div>
+            <div class="modal-body">
+                <p>Thanks for choosing FlyHigh for your booking.</p>
+                <p> Please check your inbox for the confirmation mail and e-ticket.</p>
+                <p><a href="homepage.html" /> Return to Home</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
 
 <footer class="row-footer">
     <div class="container">
@@ -121,4 +398,5 @@
     </div>
 </footer>
 </body>
+
 </html>

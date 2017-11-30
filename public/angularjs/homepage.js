@@ -2,7 +2,11 @@
 var searchFlight = angular.module('searchFlight', []);
 console.log('Inside homepage.js');
 
+// <<<<<<< HEAD
 // login.controller('login', function($scope, $http) {
+// =======
+var searchFlight = angular.module('searchFlight', []);
+// >>>>>>> origin/sudha
 searchFlight.controller('searchFlight', function($scope, $http) {
     // $scope.unexpected_error = true;
     // window.alert('Invalid entry');
@@ -10,13 +14,45 @@ searchFlight.controller('searchFlight', function($scope, $http) {
     $scope.searchflight = function () {
         console.log('Inside searchflight function');
 
-        $http({
-            method: 'GET',
-            url: '/flightssearch',
-            headers: { 'Content-Type': 'application/json' }
-        }).success( function (data) {
-            console.log(data);
-            window.location.assign('/flightssearch');
+// <<<<<<< HEAD
+//         $http({
+//             method: 'GET',
+//             url: '/flightssearch',
+//             headers: { 'Content-Type': 'application/json' }
+//         }).success( function (data) {
+//             console.log(data);
+//             window.location.assign('/flightssearch');
+// =======
+
+    $scope.searchflight = function () {
+
+        if (($scope.oneway) && ($scope.preferred_flights != null)) {
+            var data1_p = {
+                source: $scope.source,
+                destination: $scope.destination,
+                travel_date: Sscope.travel_date,
+                preferred_flights: $scope.preferred_flights
+            };
+            $http({
+                method: 'POST',       //Using http method POST
+                url: '/oneway_preferred',
+                headers: {'Content-Type': 'application/json'},
+                data: data1_p
+            })
+                .success(function (data) {         //Check response and redirect user to appropriate page
+                    if (data.statusCode == 401) {
+                        console.log('error finding flight');
+                        window.alert('Invalid entry');    //If user is not validated then alert user
+
+                        $scope.unexpected_error = true;
+                    } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
+                        window.location.assign('/confirmation');
+                    }
+                })
+                .error(function (error) {
+                    $scope.unexpected_error = false;
+                });
+// >>>>>>> origin/sudha
         }
     )
         // window.location.assign('/flightssearch');
