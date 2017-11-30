@@ -60,7 +60,7 @@ app.post('/checklogin', checklogin.checkLogin); //Checklogin_service.checkLogin
 app.get('/login', login.login);
 app.get('/home', routes.home);
 app.get('/flightssearch',login.flightSearch);
-
+app.get('/confirmation',login.book);
 
 app.delete('/deleteuser/:email', deleteuser.delete_a_user);
 app.put('/updateuser/:username', updateuser.update_a_user);
