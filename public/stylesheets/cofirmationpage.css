@@ -167,30 +167,30 @@ strong.logo {
     border-radius: 3px;
 }
 
-#logout{
-    color: #fff;
-    background-color: #42b9f4;
-    border-color: #000000;
-}
+/*#logout{*/
+    /*color: #fff;*/
+    /*background-color: #42b9f4;*/
+    /*border-color: #000000;*/
+/*}*/
 
-#logout:hover{
-    color: #000000;
-}
+/*#logout:hover{*/
+    /*color: #000000;*/
+/*}*/
 
 #logo{
     /*background-repeat: no-repeat;*/
     z-index: 7;
 }
 
-#user{
-    color: #ffffff;
-    background-color: #42b9f4;
-    border-color: #000000;
-}
+/*#user{*/
+    /*color: #ffffff;*/
+    /*background-color: #42b9f4;*/
+    /*border-color: #000000;*/
+/*}*/
 
-#user:hover{
-    color: #000000;
-}
+/*#user:hover{*/
+    /*color: #000000;*/
+/*}*/
 
 #oneway-btn{
     color: #FFFFFF;
