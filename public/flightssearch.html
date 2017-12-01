@@ -84,7 +84,7 @@
 </header>
 
 <div class="container">
-
+    <!--<form method="post" ng-submit="bookf();" name="bookflight" id="bookflight">-->
     <h1 class="page-title" id="pg2_title">Select flights</h1>
     <!----Gray tab for travel flights---->
     <div class="two-way" id="two-way">
@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="airline_img" id="airline_img">
-                            <img src="/images/American1.jpg" />
+                            <img src="/images/united1.jpeg" />
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -126,13 +126,14 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <span class="flight-id"><h4>AA 6079</h4></span>
+                        <span class="flight-id"><h4>United 1842</h4></span>
                     </div>
                     <div class="col-sm-4">
                         <p>08:05     14:30</p>
                     </div>
                     <div class="col-sm-4">
-                        <p><button class="btn success" id="book_button">Select Flight</button></p>
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                        <p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>
                     </div>
                 </div>
                 <span class="label label-warning">2 seats left</span>
@@ -177,7 +178,8 @@
                         <p>08:05     14:30</p>
                     </div>
                     <div class="col-sm-4">
-                        <p><button class="btn success" id="book_button">Select Flight</button></p>
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                        <p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>
                     </div>
                 </div>
                 <span class="label label-warning">5 seats left</span>
@@ -193,7 +195,7 @@
                 <div class="panel-body">
                     <p>
                         0805 (CLT) - 1430 (SAN)<br>
-                        Estimated flight time: 3 Hours 25 Minutes
+                        Estimated flight time: 6 Hours 25 Minutes
                     </p>
                 </div>
             </div>
@@ -204,7 +206,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="airline_img" id="airline_img">
-                            <img src="/images/united1.jpeg" />
+                            <img src="/images/American1.jpg" />
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -216,13 +218,14 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <span class="flight-id"><h4>United 1842</h4></span>
+                        <span class="flight-id"><h4>AA 6098</h4></span>
                     </div>
                     <div class="col-sm-4">
-                        <p>08:05     14:30</p>
+                        <p>18:00     23:30</p>
                     </div>
                     <div class="col-sm-4">
-                        <p><button class="btn success" id="book_button">Select Flight</button></p>
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                        <p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>
                     </div>
                 </div>
                 <span class="label label-warning">7 seats left</span>
@@ -237,76 +240,7 @@
             <div id="collapse3" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
-                        0805 (CLT) - 1430 (SAN)<br>
-                        Estimated flight time: 3 Hours 25 Minutes
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div><!----END Accordion ONE for Travel flight---->
-
-    <!----Gray tab for return flights---->
-    <div class="two-way" id="two-way">
-        <ul>
-            <li>
-                <h1>
-                    SAN
-                </h1>
-            </li>
-            <li class="plane-icon" id="plane-icon">
-                <span class="icon-whiteplane" id="icon-whiteplane"></span>
-            </li>
-            <li>
-                <h1>
-                    CLT
-                </h1>
-            </li>
-        </ul>
-        <div class="clear"></div>
-    </div><!--Gray tab return END-->
-
-    <!----Accordion TWO for RETURN flight---->
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <!---START Flight fetch---->
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="airline_img" id="airline_img">
-                            <img src="/images/Alaska1.jpeg" />
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>SAN  -  CLT</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h2><span class="label label-info">$706</span></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <span class="flight-id"><h4>Alaska 319</h4></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>08:05     14:30</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p><button class="btn success" id="book_button">Select Flight</button></p>
-                    </div>
-                </div>
-                <span class="label label-warning">2 seats left</span>
-                <br/>
-                <br/>
-                <!---END Flight fetch--->
-                <h4 class="panel-title" id="view-details">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                        View Details</a>
-                </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <p>
-                        0805 (SAN) - 1430 (CLT)<br>
+                        0905 (CLT) - 1530 (SAN)<br>
                         Estimated flight time: 3 Hours 25 Minutes
                     </p>
                 </div>
@@ -322,52 +256,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <p>SAN  -  CLT</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h2><span class="label label-info">$656</span></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <span class="flight-id"><h4>AA 6079</h4></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>08:05     14:30</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <p><button class="btn success" id="book_button">Select Flight</button></p>
-                    </div>
-                </div>
-                <span class="label label-warning">5 seats left</span>
-                <br/>
-                <br/>
-                <!---END Flight fetch--->
-                <h4 class="panel-title" id="view-details">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                        View Details</a>
-                </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>
-                        0805 (SAN) - 1430 (CLT)<br>
-                        Estimated flight time: 3 Hours 25 Minutes
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <!---START Flight fetch---->
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="airline_img" id="airline_img">
-                            <img src="/images/American1.jpg" />
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>SAN  -  CLT</p>
+                        <p>CLT  -  SAN</p>
                     </div>
                     <div class="col-sm-4">
                         <h2><span class="label label-info">$456</span></h2>
@@ -375,13 +264,14 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <span class="flight-id"><h4>AA 6079</h4></span>
+                        <span class="flight-id"><h4>AA 6098</h4></span>
                     </div>
                     <div class="col-sm-4">
-                        <p>08:05     14:30</p>
+                        <p>11:05     17:30</p>
                     </div>
                     <div class="col-sm-4">
-                        <p><button class="btn success" id="book_button">Select Flight</button></p>
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                        <p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>
                     </div>
                 </div>
                 <span class="label label-warning">7 seats left</span>
@@ -396,13 +286,218 @@
             <div id="collapse3" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
-                        0805 (SAN) - 1430 (CLT)<br>
-                        Estimated flight time: 3 Hours 25 Minutes
+                        1205 (CLT) - 1730 (SAN)<br>
+                        Estimated flight time: 5 Hours 25 Minutes
                     </p>
                 </div>
             </div>
         </div>
-    </div><!----END Accordion TWO for Travel flight---->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <!---START Flight fetch---->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="airline_img" id="airline_img">
+                            <img src="/images/frontier1.jpg" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>CLT  -  SAN</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2><span class="label label-info">$456</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <span class="flight-id"><h4>Frontier 598</h4></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>08:05     14:30</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                        <p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>
+                    </div>
+                </div>
+                <span class="label label-warning">7 seats left</span>
+                <br/>
+                <br/>
+                <!---END Flight fetch--->
+                <h4 class="panel-title" id="view-details">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        View Details</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+                        2005 (CLT) - 0230 (SAN)<br>
+                        Estimated flight time: 6 Hours 25 Minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><!----END Accordion ONE for Travel flight---->
+
+    <!----Gray tab for return flights---->
+    <!--<div class="two-way" id="two-way">-->
+        <!--<ul>-->
+            <!--<li>-->
+                <!--<h1>-->
+                    <!--SAN-->
+                <!--</h1>-->
+            <!--</li>-->
+            <!--<li class="plane-icon" id="plane-icon">-->
+                <!--<span class="icon-whiteplane" id="icon-whiteplane"></span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<h1>-->
+                    <!--CLT-->
+                <!--</h1>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<div class="clear"></div>-->
+    <!--</div>&lt;!&ndash;Gray tab return END&ndash;&gt;-->
+
+    <!--&lt;!&ndash;&#45;&#45;Accordion TWO for RETURN flight&#45;&#45;&ndash;&gt;-->
+    <!--<div class="panel-group" id="accordion">-->
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--&lt;!&ndash;-START Flight fetch&#45;&#45;&ndash;&gt;-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<div class="airline_img" id="airline_img">-->
+                            <!--<img src="/images/Alaska1.jpeg" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>SAN  -  CLT</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<h2><span class="label label-info">$706</span></h2>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<span class="flight-id"><h4>Alaska 319</h4></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>08:05     14:30</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<span class="label label-warning">2 seats left</span>-->
+                <!--<br/>-->
+                <!--<br/>-->
+                <!--&lt;!&ndash;-END Flight fetch-&ndash;&gt;-->
+                <!--<h4 class="panel-title" id="view-details">-->
+                    <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">-->
+                        <!--View Details</a>-->
+                <!--</h4>-->
+            <!--</div>-->
+            <!--<div id="collapse1" class="panel-collapse collapse in">-->
+                <!--<div class="panel-body">-->
+                    <!--<p>-->
+                        <!--0805 (SAN) - 1430 (CLT)<br>-->
+                        <!--Estimated flight time: 3 Hours 25 Minutes-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--&lt;!&ndash;-START Flight fetch&#45;&#45;&ndash;&gt;-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<div class="airline_img" id="airline_img">-->
+                            <!--<img src="/images/American1.jpg" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>SAN  -  CLT</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<h2><span class="label label-info">$656</span></h2>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<span class="flight-id"><h4>AA 6079</h4></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>08:05     14:30</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<span class="label label-warning">5 seats left</span>-->
+                <!--<br/>-->
+                <!--<br/>-->
+                <!--&lt;!&ndash;-END Flight fetch-&ndash;&gt;-->
+                <!--<h4 class="panel-title" id="view-details">-->
+                    <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">-->
+                        <!--View Details</a>-->
+                <!--</h4>-->
+            <!--</div>-->
+            <!--<div id="collapse2" class="panel-collapse collapse">-->
+                <!--<div class="panel-body">-->
+                    <!--<p>-->
+                        <!--0805 (SAN) - 1430 (CLT)<br>-->
+                        <!--Estimated flight time: 3 Hours 25 Minutes-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--&lt;!&ndash;-START Flight fetch&#45;&#45;&ndash;&gt;-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<div class="airline_img" id="airline_img">-->
+                            <!--<img src="/images/American1.jpg" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>SAN  -  CLT</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<h2><span class="label label-info">$456</span></h2>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<span class="flight-id"><h4>AA 6079</h4></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>08:05     14:30</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<span class="label label-warning">7 seats left</span>-->
+                <!--<br/>-->
+                <!--<br/>-->
+                <!--&lt;!&ndash;-END Flight fetch-&ndash;&gt;-->
+                <!--<h4 class="panel-title" id="view-details">-->
+                    <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">-->
+                        <!--View Details</a>-->
+                <!--</h4>-->
+            <!--</div>-->
+            <!--<div id="collapse3" class="panel-collapse collapse">-->
+                <!--<div class="panel-body">-->
+                    <!--<p>-->
+                        <!--0805 (SAN) - 1430 (CLT)<br>-->
+                        <!--Estimated flight time: 3 Hours 25 Minutes-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>&lt;!&ndash;&#45;&#45;END Accordion TWO for Travel flight&#45;&#45;&ndash;&gt;-->
 </div>
 
 <footer class="row-footer">

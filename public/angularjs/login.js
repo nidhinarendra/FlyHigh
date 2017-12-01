@@ -238,34 +238,35 @@ login.controller('login', function($scope, $http) {
       //           });
       //   }
   };
-    $scope.bookf = function () {
-        console.log('Inside searchflight function');
-        // var data1_np = {
-        //     source: $scope.source,
-        //     destination: $scope.destination,
-        //     travel_date: $scope.travel_date
-        //
-        // };
-        $http({
-            method: 'GET',       //Using http method POST
-            // url: '/confirmation',
-            headers: {'Content-Type': 'application/json'},
-            data: data1_np
-        })
-            .success(function (data) {         //Check response and redirect user to appropriate page
-                if (data.statusCode == 401) {
-                    console.log('error booking flight');
-                    window.alert('Invalid entry');    //If user is not validated then alert user
-
-                    $scope.unexpected_error = true;
-                } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
-                    window.location.assign('/confirmation');
-                    console.log('delivering flights');
-                }
-            })
-            .error(function (error) {
-                $scope.unexpected_error = false;
-            });
-    };
+    // $scope.bookf = function () {
+    //     console.log('Inside searchflight function');
+    //     // var data = {
+    //     //     source: $scope.source,
+    //     //     destination: $scope.destination,
+    //     //     travel_date: $scope.travel_date,
+    //
+    //     //
+    //     // };
+    //     $http({
+    //         method: 'GET',       //Using http method POST
+    //         url: '/confirmation',
+    //         headers: {'Content-Type': 'application/json'},
+    //         // data: data1_np
+    //     })
+    //         .success(function (data) {         //Check response and redirect user to appropriate page
+    //             if (data.statusCode == 401) {
+    //                 console.log('error booking flight');
+    //                 window.alert('Invalid entry');    //If user is not validated then alert user
+    //
+    //                 $scope.unexpected_error = true;
+    //             } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
+    //                 window.location.assign('/confirmation');
+    //                 console.log('delivering flights');
+    //             }
+    //         })
+    //         .error(function (error) {
+    //             $scope.unexpected_error = false;
+    //         });
+    // };
 
 });

@@ -5,7 +5,7 @@ console.log("inside book_flights");
 exports.post_user_flight = function(req, res) {     //Service to post user and flights data from flightssearch.html
 
     var save_data = {
-        username: req.body.uername,
+        username: req.body.username,
         contact: req.body.contact,
         duration: req.body.duration,
         costFlight: req.body.price,
