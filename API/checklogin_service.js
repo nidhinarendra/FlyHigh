@@ -17,7 +17,9 @@ exports.checkLogin = function(req, res) {
         json_responses = {
           statusCode: 200
         };
-        req.session.user = user.email;
+        req.session.user_email = user.email;
+        req.session.username = user.username;
+        req.session.contact = user.contact;
         res.send(json_responses);
       } else {
         console.log('no user found');

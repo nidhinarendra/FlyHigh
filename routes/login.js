@@ -1,6 +1,13 @@
 exports.login = function(req, res) {
   res.sendfile('public/login.html');
 };
+exports.flightSearch = function(req, res) {
+    res.sendfile('public/flightssearch.html');
+};
+
+exports.book = function(req,res) {
+  res.sendfile('public/confirmationpage.html');
+};
 
 exports.redirectToHomepage = function(req, res) {
   if (req.session_express.email && req.session_express.name) {
@@ -13,6 +20,8 @@ exports.redirectToHomepage = function(req, res) {
     res.redirect('/');
   }
 };
+
+
 
 exports.logout = function(req, res) {
   req.session_express.destroy();
