@@ -50,3 +50,9 @@
       display: inline-block;
       color: Green;
     }
+
+    #adm{
+        position:relative;
+        top:130px;
+        left:50px;
+    }
