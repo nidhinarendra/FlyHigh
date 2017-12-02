@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 
 
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
@@ -19,21 +19,59 @@
 </head>
 
 <body ng-app="login" ng-controller="login">
-	<fieldset>
-		<legend>FlyHigh with us</legend>
-		<br>
 
+<div class="container">
+	<div class="card card-container">
+		<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+		<img id="profile-img" class="profile-img-card" />
+		<p id="profile-name" class="profile-name-card"></p>
 		<form form method="post" ng-submit="signIn();" method="post” name="signin">
+			<!--<span id="reauth-email" class="reauth-email"></span>-->
+			<input type="email" id="email" class="form-control" ng-model="email" placeholder="Email address" required autofocus>
+	</br>
+			<input type="password" id="pwd" class="form-control" ng-model="password" type="password" placeholder="Password" required>
+			<div id="remember" class="checkbox">
+				<label>
+					<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div>
+			<input class="btn btn-lg btn-primary btn-block btn-signin" value="Sign-in" id="sign-in" type="submit"/>
+	</br>
+		</form><!-- /form -->
+		<a href="#" class="forgot-password">
+			Forgot the password?
+		</a>
+	</div><!-- /card-container -->
+</div><!-- /container -->
 
-			<input type="email" id="email" ng-model="email" placeholder="email id" required>
-			<br> <br> <input type="password" id="pwd" ng-model="password"
-				type="password" placeholder="password"
-				required> <br> <br>
 
-				<input type="submit" value="Sign-in">
+	<!--<fieldset>-->
+		<!--<div class="panel panel-default">-->
+			<!--<div class="panel-heading" id="panel-heading">FlyHigh with us</div>-->
+			<!--<div class="panel-body" id="panel-body">-->
+				<!--<form form method="post" ng-submit="signIn();" method="post” name="signin">-->
+
+				<!--&lt;!&ndash;<input type="email" id="email" ng-model="email" placeholder="email id" required>&ndash;&gt;-->
+				<!--&lt;!&ndash;<br> <br> <input type="password" id="pwd" ng-model="password"&ndash;&gt;-->
+								 <!--&lt;!&ndash;type="password" placeholder="password"&ndash;&gt;-->
+								 <!--&lt;!&ndash;required> <br> <br>&ndash;&gt;-->
+				<!--&lt;!&ndash;<input type="submit" value="Sign-in" id="sign-in" class="btn">&ndash;&gt;-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--&lt;!&ndash;<legend>FlyHigh with us</legend>&ndash;&gt;-->
+		<!--<br>-->
+
+		<!--<form form method="post" ng-submit="signIn();" method="post” name="signin">-->
+
+			<!--<input type="email" id="email" ng-model="email" placeholder="email id" required>-->
+			<!--<br> <br> <input type="password" id="pwd" ng-model="password"-->
+				<!--type="password" placeholder="password"-->
+				<!--required> <br> <br>-->
+
+				<!--<input type="submit" value="Sign-in" id="sign-in">-->
 
 
-		</form>
+		<!--</form>-->
 	</fieldset>
 
 

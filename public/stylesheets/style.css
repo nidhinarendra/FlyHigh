@@ -1,5 +1,330 @@
+body{
+    height: 100%;
+    background-repeat: no-repeat;
+    /*background-image: linear-gradient(rgb(234,248,255), rgb(66,185,244));*/
+    background-image: url("/images/collage.png");
+    background-size: cover;
+    /*opacity: 0.5;*/
+}
 
-    h1 {
+
+.card-container.card {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    width: 70px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /*cursor: default;*/
+}
+
+/*
+ * Card component
+ */
+.card {
+    /*background-color: #F7F7F7;*/
+    background-color: #000000;
+    border-right-color: #ff066b;
+    /*background-image: linear-gradient(rgb(234,248,255), rgb(66,185,244));*/
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+
+}
+
+#profile-img{
+    background-image: url("/images/airplane.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    -moz-border-radius: 70%;
+    -webkit-border-radius: 70%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+#firstname{
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#firstname:focus{
+    border-color: red;
+    border-width: medium;
+}
+
+#lastname{
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#lastname:focus{
+    border-color: red;
+    border-width: medium;
+}
+
+#email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#email:focus{
+    border-color: red;
+    /*outline: 5px;*/
+    border-width: medium;
+}
+
+#pwd{
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#pwd:focus{
+    border-color: red;
+    /*outline: 5px;*/
+    border-width: medium;
+}
+
+#password{
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+#password:focus{
+    border-color: red;
+    /*outline: 5px;*/
+    border-width: medium;
+}
+
+#repassword{
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+#repassword:focus{
+    border-color: red;
+    /*outline: 5px;*/
+    border-width: medium;
+}
+
+#gender{
+    color: #FFFFFF;
+}
+
+#label-male {
+    overflow: hidden;
+    color: #FFFFFF;
+}
+
+#male {
+      /* This is on purpose for accessibility. Using display: hidden is evil.
+      This makes things keyboard friendly right out tha box! */
+      height: 1px;
+      width: 1px;
+      position: absolute;
+      top: -20px;
+}
+
+#label-female {
+    overflow: hidden;
+    color: #FFFFFF;
+}
+
+#label-male.not-active {
+    color: #ff066b;
+    background-color: #fff;
+}
+
+
+
+#female {
+    /* This is on purpose for accessibility. Using display: hidden is evil.
+    This makes things keyboard friendly right out tha box! */
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: -20px;
+}
+
+.radio-group .not-active  {
+        color: #3276b1;
+        background-color: #fff;
+    }
+
+.forgot-password {
+    color: rgb(234,248,255);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(66,185,244);
+}
+#phnum{
+    color: #FFFFFF;
+}
+#phone{
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: ltr;
+    height: 44px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+#phone:focus{
+    border-color: red;
+    /*outline: 5px;*/
+    border-width: medium;
+}
+
+#join-us{
+    background-color: #42b9f4;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    width: 100%;
+}
+
+#join-us:hover,
+#join-us:active,
+#join-us:focus {
+    color: #000000;
+    border-color: red;
+    background-color: #b8e4f9;
+}
+
+
+h1 {
       color: white;
     }
 
@@ -26,27 +351,60 @@
        font-size: 15px;
     }
 
-
     fieldset
     {
       position:relative;
       left: 50px;
       top: 120px;
-      border: 5px groove gray;
+      /*border: 5px groove gray;*/
       width: 350px;
       display: inline-block;
     }
 
+
+    #sign-in{
+        background-color: #42b9f4;
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+
+#sign-in:hover,
+#sign-in:active,
+#sign-in:focus {
+    color: #000000;
+    border-color: red;
+    background-color: #b8e4f9;
+}
+
+#reg-signin{
+    background-color: #42b9f4;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+#reg-signin:hover,
+#reg-signin:active,
+#reg-signin:focus {
+    color: #000000;
+    border-color: red;
+    background-color: #b8e4f9;
+}
+
     body
     {
-      background-image: url("/images/loginimg.jpg");
+      /*background-image: url("/images/loginimg.jpg");*/
       background-size: 100%;
       background-repeat: no-repeat;
       width: 100%;
       height: 100%;
+        /*opacity: 0.5;*/
    }
     #inlinedisplay
     {
       display: inline-block;
-      color: Green;
+      color: #42b9f4;
+    }
+
+    #existingCustomer{
+        color: #FFFFFF;
     }

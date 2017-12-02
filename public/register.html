@@ -19,42 +19,39 @@
 </head>
 
 <body ng-app="login" ng-controller="login">
-	<fieldset>
-		<legend>FlyHigh with us</legend>
-		<br>
 
-		<form method="post" ng-submit="register();" name="register”>
-			<div id="inlinedisplay">
-				<input type="text" name = "firstname" id="firstname" ng-model="firstname" placeholder="First Name" required>
-				<input type="text" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name" required>
-				<br> <br>
-			</div>
+<div class="container">
+	<div class="card card-container">
+		<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+		<img id="profile-img" class="profile-img-card" />
+		<p id="profile-name" class="profile-name-card"></p>
+	</br>
 
-			<input type="email" name = "email" id="email" ng-model="email" placeholder="email id" required>
-			<br> <br>
-
-
+		<form method="post" ng-submit="register();" name="register" >
+			<input type="text" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name" required autofocus>
+			</br>
+			<input type="text" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name" required>
+			</br>
+			<input type="email" id="email" class="form-control" ng-model="email" placeholder="Email address" required>
+			</br>
 			<input type="password" name= "password" id="password" ng-model="password" type="password" placeholder="New password" required onkeyup="pwcheck()">
-			<br> <br>
+			</br>
 			<span id='message'></span>
 			<input type="password" name="confirmpassword" id="repassword" placeholder="Re-enter password" required onkeyup="pwrecheck()">
-			<span id='alert_message'></span> <br> <br>
+			<span id='alert_message'></span>
+			</br>
+			<label for="phone_number" id="phnum"> Phone number   </label> <input type="tel" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
+			</br>
+			<!--<input class="btn btn-lg btn-primary btn-block btn-signin" value="Sign-in" id="sign-in" type="submit"/>-->
+			<input class="btn btn-lg btn-primary btn-block" value="Join Us" id="join-us" type="submit"/>
+			</br> </br>
+			<label for="existingCustomer" id="existingCustomer">Existing Customer?</label>&ensp;
+			<input type="submit" value="Sign-in" id="reg-signin" onclick="location.href='login.html'">
+			</form>
+	</div>
+</div>
 
-			<label for="gender"> Gender:</label><br> <input type="radio" id="male" name="gender" value="male"> <label for="male"> Male</label>
-			<input type="radio" id="female" name="gender" ng-model="gender" value="female">
-
-			<label for="female"> Female</label> <br> <br> <label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
-			<br> <br>
-			<label for="phone_number"> Phone number: </label> <input type="tel" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
-			<br> <br>
-			<input type="submit" value="Join us">
-		</form>
-		<br>
-
-		<label for="existingCustomer">Existing Customer?</label>&ensp;<input type="submit" value="Sign-in" onclick="location.href='login.html'">
-
-	</fieldset>
-
-
+	</div><!-- /card-container -->
+</div><!-- /container -->
 </body>
 </html>
