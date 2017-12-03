@@ -7,7 +7,6 @@ body{
     /*opacity: 0.5;*/
 }
 
-
 .card-container.card {
     -webkit-filter: blur(0px);
     filter: blur(0px);
@@ -90,8 +89,8 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
     box-sizing: border-box;
     direction: ltr;
     height: 44px;
@@ -226,6 +225,10 @@ body{
     border-color: red;
     /*outline: 5px;*/
     border-width: medium;
+}
+
+#rem-me{
+    color: #FFFFFF;
 }
 
 #gender{
