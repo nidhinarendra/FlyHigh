@@ -21,12 +21,15 @@
 <body ng-app="login" ng-controller="login">
 
 <div class="container">
-	<div class="card card-container">
+	<div class="container-lg p-responsive position-relative" id="cont-lg">
+	<div class="d-md-flex" id="registercont">
+	<div class="col-md-7 text-center text-md-left" id="registerpage-signup">
+	<div class="card card-container" id="card-container">
 		<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
 		<img id="profile-img" class="profile-img-card" />
 		<p id="profile-name" class="profile-name-card"></p>
 
-		<div class="span4 registerpage-signup" id="registerpage-signup">
+
 		<form form method="post" ng-submit="register();" method="post" name="register" >
 			<input type="text" class="form-control" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name" required autofocus>
 			</br>
@@ -47,11 +50,21 @@
 			</br>
 		</form>
 		</div>
-		<div class="span8 registerpage-signin" id="registerpage-signin" >
+	</div>
+		<div class="mx-auto col-sm-8 col-md-6 hide-sm" id="registerpage-signin" >
+			<div class="card card-container" id="card2">
+				<h1>Once a year, go someplace you've never been before</h1>
+				<h3><p>FlyHigh makes flight bookings easier than ever before.</p>
+					<p>It brings together airlines price range prediction and flight booking features.</p></h3>
+				<h1><p> We have your wings.</p></h1>
+				<h1><p>So just FlyHigh! </p></h1>
+				</br>
 			<label for="existingCustomer" id="existingCustomer">Existing Customer?</label>&ensp;
 			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign-in" id="reg-signin" onclick="location.href='login.html'"/>
+			</div>
 		</div>
 	</div>
+</div>
 </div>
 </body>
 </html>
