@@ -11,7 +11,8 @@
     <script
             src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!--<script src="/angularjs/homepage.js"></script>-->
-    <script src="/angularjs/login.js"></script>
+    <script src="angularjs/login.js"></script>
+
     <script src="/otherjavascripts/homepage.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -38,7 +39,7 @@
 
 </head>
 
-<body id="body_bg" ng-app="login" ng-controller="searchf">
+<body id="body_bg" ng-app="login" ng-controller="login">
 <!--ng-app="search_flight" ng-controller="searchf">-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
     <div class="navbar-header">
@@ -56,10 +57,15 @@
             <li><a href="#">Existing Booking</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" id="user" class="btn btn-md">
-                <span class="glyphicon glyphicon-user"></span> Welcome Surbhit!
+<!--<<<<<<< HEAD-->
+            <!--<li><a href="#" id="user" class="btn btn-md">-->
+                <!--<span class="glyphicon glyphicon-user"></span> Welcome Surbhit!-->
+<!--=======-->
+            <li><a href="#" id="user" class="btn btn-md"> <span class="glyphicon glyphicon-user"></span> Welcome
+                Surbhit!
+<!--&gt;>>>>>> origin/tushar-->
             </a></li>
-            <li><a href="#" id="logout"  class="btn btn-md">
+            <li><a href="#"  ng-click="logout()" id="logout"  class="btn btn-md">
                 <span class="glyphicon glyphicon-log-out"></span> Log out
             </a></li>
         </ul>
@@ -107,34 +113,34 @@
                     <form method="get">
                         <div id="inlinedisplay">
                             <!--<div class="row">-->
-                            <input type="text" name = "firstname" id="firstname" placeholder="First Name" required>
+                            <input type="text" name = "surbhit" id="firstname" placeholder="Surbhit" required>
 
-                            <input type="text" name = "lastname" id="lastname" placeholder="Last Name" required>
+                            <input type="text" name = "bhatnagar" id="lastname" placeholder="Bhatnagar" required>
                             </br> </br>
                             <!--</div>-->
                         </div>
 
                         <!--<div class="row">-->
-                        <input type="email" name = "email" id="email" placeholder="email id" required>
+                        <input type="email" name = "email" id="email" placeholder="surbh@gmail.com" required>
                         </br> </br>
                         <!--</div>-->
 
                         <!--<div class="row">-->
-                        <label for="gender"> Gender:</label></br>
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male"> Male</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female"> Female</label>
-                        </br> </br>
+                        <!--<label for="gender"> Gender:</label></br>-->
+                        <!--<input type="radio" id="male" name="gender" value="male">-->
+                        <!--<label for="male"> Male</label>-->
+                        <!--<input type="radio" id="female" name="gender" value="female">-->
+                        <!--<label for="female"> Female</label>-->
+                        <!--</br> </br>-->
                         <!--</div>-->
 
                         <!--<div class="row">-->
-                        <label for="DOB"> Date of birth:</label> <input type="date" id="birthday" name="birthday">
-                        </br> </br>
+                        <!--<label for="DOB"> Date of birth:</label> <input type="date" id="birthday" name="birthday">-->
+                        <!--</br> </br>-->
                         <!--</div>-->
 
                         <!--<div class="row">-->
-                        <label for="phone_number"> Phone number: </label> <input type="tel" name = "phone" id="phone" >
+                        <label for="phone_number"> Phone number: </label> <input type="tel" name = "phone" id="phone" placeholder="(111)111-1111">
                         </br> </br>
                         <!--</div>-->
                     </form>
@@ -156,7 +162,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="airline_img" id="airline_img">
-                            <img src="/images/American1.jpg" />
+                            <img src="/images/united1.jpeg" />
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -168,7 +174,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <span class="flight-id"><h4>AA 6079</h4></span>
+                        <span class="flight-id"><h4>United 1842</h4></span>
                     </div>
                     <div class="col-sm-4">
                         <p>08:05     14:30</p>
@@ -195,52 +201,52 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <!---START Flight fetch---->
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="airline_img" id="airline_img">
-                            <img src="/images/virgin1.jpeg" />
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>SAN  -  CLT</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h2><span class="label label-info">$456</span></h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <span class="flight-id"><h4>Virgin America 1938</h4></span>
-                    </div>
-                    <div class="col-sm-4">
-                        <p>08:05     14:30</p>
-                    </div>
+        <!--<div class="panel panel-default">-->
+            <!--<div class="panel-heading">-->
+                <!--&lt;!&ndash;-START Flight fetch&#45;&#45;&ndash;&gt;-->
+                <!--<div class="row">-->
                     <!--<div class="col-sm-4">-->
-                    <!--<p><button class="btn success" id="book_button">Book Now</button></p>-->
+                        <!--<div class="airline_img" id="airline_img">-->
+                            <!--<img src="/images/virgin1.jpeg" />-->
+                        <!--</div>-->
                     <!--</div>-->
-                </div>
-                <span class="label label-warning">5 seats left</span>
-                <br/>
-                <br/>
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>SAN  -  CLT</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<h2><span class="label label-info">$456</span></h2>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<span class="flight-id"><h4>Virgin America 1938</h4></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<p>08:05     14:30</p>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="col-sm-4">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<p><button class="btn success" id="book_button">Book Now</button></p>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<span class="label label-warning">5 seats left</span>-->
+                <!--<br/>-->
+                <!--<br/>-->
 
-                <!---END Flight fetch--->
-                <h4 class="panel-title" id="view-details">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                        View Details</a>
-                </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>
-                        0805 (SAN) - 1430 (CLT)<br>
-                        Estimated flight time: 3 Hours 25 Minutes
-                    </p>
-                </div>
-            </div>
-        </div>
+                <!--&lt;!&ndash;-END Flight fetch-&ndash;&gt;-->
+                <!--<h4 class="panel-title" id="view-details">-->
+                    <!--<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">-->
+                        <!--View Details</a>-->
+                <!--</h4>-->
+            <!--</div>-->
+            <!--<div id="collapse2" class="panel-collapse collapse">-->
+                <!--<div class="panel-body">-->
+                    <!--<p>-->
+                        <!--0805 (SAN) - 1430 (CLT)<br>-->
+                        <!--Estimated flight time: 3 Hours 25 Minutes-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
     </div>
     <!----END Accordion ONE for Travel flight---->
@@ -265,7 +271,7 @@
                             <div class="col-xs-12">
                                 <div class="form-group">
                                     <label for="Total-amount">TOTAL AMOUNT</label>
-                                    <input type="text"/>
+                                    <input type="text" placeholder="$678"/>
                                     </br></br>
                                     <label for="cardNumber">CARD NUMBER</label>
                                     <div class="input-group">
@@ -343,7 +349,7 @@
             <div class="modal-body">
                 <p>Thanks for choosing FlyHigh for your booking.</p>
                 <p> Please check your inbox for the confirmation mail and e-ticket.</p>
-                <p><a href="homepage.html" /> Return to Home</p>
+                <p><a href="/home" /> Return to Home</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

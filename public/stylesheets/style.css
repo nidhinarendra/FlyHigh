@@ -478,6 +478,13 @@ h1 {
       color: #42b9f4;
     }
 
-    #existingCustomer{
-        color: #FFFFFF;
+/*<<<<<<< HEAD*/
+    /*#existingCustomer{*/
+        /*color: #FFFFFF;*/
+/*=======*/
+    #adm{
+        position:relative;
+        top:130px;
+        left:50px;
+/*>>>>>>> origin/tushar*/
     }
