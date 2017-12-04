@@ -30,7 +30,7 @@
 		<p id="profile-name" class="profile-name-card"></p>
 
 
-		<form form method="post" ng-submit="register();" method="post" name="register" >
+		<form method="post" ng-submit="register();" name="reg">
 			<input type="text" class="form-control" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name" required autofocus>
 			</br>
 			<input type="text" class="form-control" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name" required>
@@ -43,10 +43,20 @@
 			<input type="password" class="form-control" name="confirmpassword" id="repassword" placeholder="Re-enter password" required onkeyup="pwrecheck()">
 			<span id='alert_message'></span>
 			</br>
+			<label for="gender"> Gender:</label><br>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male"> Male</label>
+			<input type="radio" id="female" name="gender" ng-model="gender" value="female">
+			<label for="female"> Female</label> <br> <br>
+			<label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
+			<br> <br>
+
 			<label for="phone_number" id="phnum"> Phone number   </label> <input type="tel" class="form-control" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
 			</br>
 			<!--<input class="btn btn-lg btn-primary btn-block btn-signin" value="Sign-in" id="sign-in" type="submit"/>-->
 			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Join us" id="join-us" />
+			<!--<input type="submit" value="Join us">-->
+
 			</br>
 		</form>
 		</div>

@@ -270,48 +270,54 @@ body{
 }
 
 #gender{
-    color: #FFFFFF;
+    color: white;
 }
 
-#label-male {
-    overflow: hidden;
-    color: #FFFFFF;
+label {
+    font-weight: bold;
+    color: white;
 }
 
-#male {
-      /* This is on purpose for accessibility. Using display: hidden is evil.
-      This makes things keyboard friendly right out tha box! */
-      height: 1px;
-      width: 1px;
-      position: absolute;
-      top: -20px;
-}
+/*#label-male {*/
+    /*overflow: hidden;*/
+    /*!*color: #FFFFFF;*!*/
+    /*color: white;*/
+/*}*/
 
-#label-female {
-    overflow: hidden;
-    color: #FFFFFF;
-}
+/*#male {*/
+      /*!* This is on purpose for accessibility. Using display: hidden is evil.*/
+      /*This makes things keyboard friendly right out tha box! *!*/
+      /*height: 1px;*/
+      /*width: 1px;*/
+      /*position: absolute;*/
+      /*top: -20px;*/
+/*}*/
 
-#label-male.not-active {
-    color: #ff066b;
-    background-color: #fff;
-}
+/*#label-female {*/
+    /*!*overflow: hidden;*!*/
+    /*color: #FFFFFF;*/
+/*}*/
+
+/*#label-male.not-active {*/
+    /*color: white;*/
+    /*!*background-color: white;*!*/
+/*}*/
 
 
 
-#female {
-    /* This is on purpose for accessibility. Using display: hidden is evil.
-    This makes things keyboard friendly right out tha box! */
-    height: 1px;
-    width: 1px;
-    position: absolute;
-    top: -20px;
-}
+/*#female {*/
+    /*!* This is on purpose for accessibility. Using display: hidden is evil.*/
+    /*This makes things keyboard friendly right out tha box! *!*/
+    /*height: 1px;*/
+    /*width: 1px;*/
+    /*position: absolute;*/
+    /*top: -20px;*/
+/*}*/
 
-.radio-group .not-active  {
-        color: #3276b1;
-        background-color: #fff;
-    }
+/*.radio-group .not-active  {*/
+        /*color: #3276b1;*/
+        /*background-color: #fff;*/
+    /*}*/
 
 .forgot-password {
     color: rgb(234,248,255);
@@ -375,16 +381,17 @@ h1 {
 
     label {
       font-weight: bold;
-      color: Black;
+      color: white;
     }
 
     input
     {
-      color: black;
+      color: red;
     }
     input[type = "radio"]      /*CSS Styles for radio*/
     {
         width: 15px;
+
 
     }
     input:focus
