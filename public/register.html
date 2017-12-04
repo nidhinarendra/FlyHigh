@@ -4,7 +4,7 @@
 <title>FlyHigh!</title>
 <link rel="stylesheet" href="/stylesheets/style.css">
 
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script
@@ -19,42 +19,62 @@
 </head>
 
 <body ng-app="login" ng-controller="login">
-	<fieldset>
-		<legend>FlyHigh with us</legend>
-		<br>
 
-		<form method="post" ng-submit="register();" name="register”>
-			<div id="inlinedisplay">
-				<input type="text" name = "firstname" id="firstname" ng-model="firstname" placeholder="First Name" required>
-				<input type="text" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name" required>
-				<br> <br>
-			</div>
-
-			<input type="email" name = "email" id="email" ng-model="email" placeholder="email id" required>
-			<br> <br>
+<div class="container">
+	<div class="container-lg p-responsive position-relative" id="cont-lg">
+	<div class="d-md-flex" id="registercont">
+	<div class="col-md-7 text-center text-md-left" id="registerpage-signup">
+	<div class="card card-container" id="card-container">
+		<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+		<img id="profile-img" class="profile-img-card" />
+		<p id="profile-name" class="profile-name-card"></p>
 
 
-			<input type="password" name= "password" id="password" ng-model="password" type="password" placeholder="New password" required onkeyup="pwcheck()">
-			<br> <br>
+		<form method="post" ng-submit="register();" name="reg">
+			<input type="text" class="form-control" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name" required autofocus>
+			</br>
+			<input type="text" class="form-control" name = "lastname" id="lastname" ng-model="lastname" placeholder="Last Name" required>
+			</br>
+			<input type="email"  id="email" class="form-control" ng-model="email" placeholder="Email address" required>
+			</br>
+			<input type="password" class="form-control" name= "password" id="password" ng-model="password" type="password" placeholder="New password" required onkeyup="pwcheck()">
+			</br>
 			<span id='message'></span>
-			<input type="password" name="confirmpassword" id="repassword" placeholder="Re-enter password" required onkeyup="pwrecheck()">
-			<span id='alert_message'></span> <br> <br>
-
-			<label for="gender"> Gender:</label><br> <input type="radio" id="male" name="gender" value="male"> <label for="male"> Male</label>
+			<input type="password" class="form-control" name="confirmpassword" id="repassword" placeholder="Re-enter password" required onkeyup="pwrecheck()">
+			<span id='alert_message'></span>
+			</br>
+			<label for="gender"> Gender:</label><br>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male"> Male</label>
 			<input type="radio" id="female" name="gender" ng-model="gender" value="female">
+			<label for="female"> Female</label> <br> <br>
+			<label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
+			<br> <br>
 
-			<label for="female"> Female</label> <br> <br> <label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
-			<br> <br>
-			<label for="phone_number"> Phone number: </label> <input type="tel" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
-			<br> <br>
-			<input type="submit" value="Join us">
+			<label for="phone_number" id="phnum"> Phone number   </label> <input type="tel" class="form-control" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
+			</br>
+			<!--<input class="btn btn-lg btn-primary btn-block btn-signin" value="Sign-in" id="sign-in" type="submit"/>-->
+			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Join us" id="join-us" />
+			<!--<input type="submit" value="Join us">-->
+
+			</br>
 		</form>
-		<br>
-
-		<label for="existingCustomer">Existing Customer?</label>&ensp;<input type="submit" value="Sign-in" onclick="location.href='login.html'">
-
-	</fieldset>
-
-
+		</div>
+	</div>
+		<div class="mx-auto col-sm-8 col-md-6 hide-sm" id="registerpage-signin" >
+			<div class="card card-container" id="card2">
+				<h1>Once a year, go someplace you've never been before</h1>
+				<h3><p>FlyHigh makes flight bookings easier than ever before.</p>
+					<p>It brings together airlines price range prediction and flight booking features.</p></h3>
+				<h1><p> We have your wings.</p></h1>
+				<h1><p>So just FlyHigh! </p></h1>
+				</br>
+			<label for="existingCustomer" id="existingCustomer">Existing Customer?</label>&ensp;
+			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign-in" id="reg-signin" onclick="location.href='login.html'"/>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
 </body>
 </html>
