@@ -32,7 +32,12 @@ ul {
   margin-bottom: 20px;
   z-index: -2;
 }
-
+#bookings {
+  background-color: #f3e97a;
+}
+#current {
+  background-color: bisque;
+}
 strong.logo {
   left: 0;
   right: 0;
