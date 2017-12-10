@@ -53,13 +53,12 @@
   </div>
   <div id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Search</a></li> <!--Home button active by default-->
+      <li><a href="#">Search</a></li> <!--Home button active by default-->
       <li><a href="#bookings">Booking History</a></li>
-      <li><a href="#current">Existing Booking</a></li>
+      <li class="active"><a href="#current">Existing Booking</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" id="user" class="btn btn-md"> <span class="glyphicon glyphicon-user"></span> Welcome
-         Surbhit!
+      <li><a href="#" id="user" class="btn btn-md"> <span class="glyphicon glyphicon-user"></span> Welcome Surbhit!
       </a></li>
       <li><a href="#"  ng-click="logout()" id="logout"  class="btn btn-md">
         <span class="glyphicon glyphicon-log-out"></span> Log out
@@ -85,18 +84,16 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <img class="img-responsive"
-                 src="images/carousel1.jpeg" alt="Uthappizza">
+                 src="images/carousel1.jpeg">
             <div class="carousel-caption">
-
               <h2 id="carousel_h21">Thanksgiving BIG Sale<span class="label label-danger">New</span> <span class="badge">$499.99</span></h2>
               <p id="carousel_p1">Special airfares to destined cities all over the U.S. Limited offer available until November 22nd  </p>
               <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
-
             </div>
           </div>
           <div class="item">
             <img class="img-responsive"
-                 src="images/carousel2.jpeg" alt="Weekend Grand Buffet">
+                 src="images/carousel2.jpeg">
             <div class="carousel-caption">
               <h2 id="carousel_h22">Latest deals<span class="label label-danger">Hot</span></h2>
               <p id="carousel_p2">Click here to check out our new deals that would most benefit your travel</p>
@@ -105,7 +102,7 @@
           </div>
           <div class="item">
             <img class="img-responsive"
-                 src="images/carousel3.jpeg" alt="Alberto Somayya">
+                 src="images/carousel3.jpeg">
             <div class="carousel-caption">
               <h2>Pre-book your check-in baggage</h2>
               <h4>Online check-in</h4>
@@ -141,7 +138,6 @@
             <label class="btn btn-primary" id="twoway-btn" onclick= "show_function()">
                     <input type="radio" id="round-trip" ng-model = "twoway" /> Round Trip
             </label>
-
             </div>
           </p><br/>
         </div>
@@ -157,7 +153,6 @@
           </button>
         </div>
         <div class="col-md-3">
-
           <input type="text" class="form-control" placeholder="To" id="destination" ng-model = "destination" required/>
         </div>
       </div>

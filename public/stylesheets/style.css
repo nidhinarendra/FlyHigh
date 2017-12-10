@@ -62,38 +62,6 @@ body{
     /*cursor: default;*/
 }
 
-/*
- * Card component
- */
-/*.card {*/
-    /*!*background-color: #F7F7F7;*!*/
-    /*background-color: #000000;*/
-    /*border-right-color: #ff066b;*/
-    /*!*background-image: linear-gradient(rgb(234,248,255), rgb(66,185,244));*!*/
-    /*!* just in case there no content*!*/
-    /*padding: 20px 25px 30px;*/
-    /*margin: 0 auto 25px;*/
-    /*margin-top: 50px;*/
-    /*!* shadows and rounded borders *!*/
-    /*-moz-border-radius: 2px;*/
-    /*-webkit-border-radius: 2px;*/
-    /*border-radius: 2px;*/
-    /*-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
-    /*-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
-    /*box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);*/
-/*}*/
-
-
-/*.profile-img-card {*/
-    /*width: 96px;*/
-    /*height: 96px;*/
-    /*margin: 0 auto 10px;*/
-    /*display: block;*/
-    /*-moz-border-radius: 50%;*/
-    /*-webkit-border-radius: 50%;*/
-    /*border-radius: 50%;*/
-
-/*}*/
 
 #profile-img{
     background-image: url("/images/airplane.png");
@@ -281,47 +249,6 @@ label {
     font-weight: bold;
     color: white;
 }
-
-/*#label-male {*/
-    /*overflow: hidden;*/
-    /*!*color: #FFFFFF;*!*/
-    /*color: white;*/
-/*}*/
-
-/*#male {*/
-      /*!* This is on purpose for accessibility. Using display: hidden is evil.*/
-      /*This makes things keyboard friendly right out tha box! *!*/
-      /*height: 1px;*/
-      /*width: 1px;*/
-      /*position: absolute;*/
-      /*top: -20px;*/
-/*}*/
-
-/*#label-female {*/
-    /*!*overflow: hidden;*!*/
-    /*color: #FFFFFF;*/
-/*}*/
-
-/*#label-male.not-active {*/
-    /*color: white;*/
-    /*!*background-color: white;*!*/
-/*}*/
-
-
-
-/*#female {*/
-    /*!* This is on purpose for accessibility. Using display: hidden is evil.*/
-    /*This makes things keyboard friendly right out tha box! *!*/
-    /*height: 1px;*/
-    /*width: 1px;*/
-    /*position: absolute;*/
-    /*top: -20px;*/
-/*}*/
-
-/*.radio-group .not-active  {*/
-        /*color: #3276b1;*/
-        /*background-color: #fff;*/
-    /*}*/
 
 .forgot-password {
     color: rgb(234,248,255);
