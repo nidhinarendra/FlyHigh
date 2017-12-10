@@ -5,43 +5,32 @@
   <meta charset="utf-8">
   <meta http-equiv="V-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Book Flights, Make your travel the best | FlyHigh</title>
   <link rel="icon" type="image/png" href="images/airplane.png">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
             src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <!--<script src="/angularjs/homepage.js"></script>-->
   <script src="angularjs/login.js"></script>
-  <!--<script src="/angularjs/homepage.js"></script>-->
   <script src="/otherjavascripts/homepage.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-
   <!-- Datepicker -->
   <link href='/otherjavascripts/CDN/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
   <script src='/otherjavascripts/CDN/bootstrap-datepicker.min.js' type='text/javascript'></script>
-
   <!--Internal Stylesheets-->
   <link rel="stylesheet" href="/stylesheets/homepage.css">
   <!--External Stylesheets-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- jQuery -->
-<!--<<<<<<< HEAD-->
-
 </head>
 
 <body id="body_bg" ng-app="login" ng-controller="login">
+<!-------START of Navigation bar------------>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -49,13 +38,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <!--<a class="navbar-brand" href="#"><img src="images/airplane.png" height=30 width=41></a>-->
   </div>
   <div id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><a href="#">Search</a></li> <!--Home button active by default-->
+      <li class="active"><a href="#">Search</a></li> <!--Search button active by default-->
       <li><a href="#bookings">Booking History</a></li>
-      <li class="active"><a href="#current">Existing Booking</a></li>
+      <li><a href="#current">Existing Booking</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#" id="user" class="btn btn-md"> <span class="glyphicon glyphicon-user"></span> Welcome Surbhit!
@@ -65,7 +53,7 @@
       </a></li>
     </ul>
   </div>
-</nav>
+</nav> <!-------END of Navigation bar------------>
 
 <!--Fixed logo at the center of page--->
 <header id="header">
@@ -76,7 +64,7 @@
   </div>
 </header>
 
-
+<!--START of Carousel-->
 <div class="container" id="carousel_set">
   <div class="row row-content">
     <div class="col-xs-12">
@@ -119,14 +107,14 @@
         <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
         <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
       </div>
-
     </div>
   </div>
-</div>
-<!--ng-submit="searchflight-->
+</div><!--END of Carousel-->
+
 <div class="container" >
   <fieldset class="search">
     <form method="post" ng-submit="searchf();" name="searchflight" id="search_flight">
+      <!--START of one-way and round trip-->
       <div class="row row-content">
         <div class="col-md-3">
           <p>
@@ -141,8 +129,9 @@
             </div>
           </p><br/>
         </div>
-      </div>
+      </div><!--END of one-way and round trip-->
 
+      <!--START of source and destination-->
       <div class="row">
         <div class="col-md-3">
           <input type="text" class="form-control" placeholder="From" id="source" ng-model = "source" required/>
@@ -156,8 +145,10 @@
           <input type="text" class="form-control" placeholder="To" id="destination" ng-model = "destination" required/>
         </div>
       </div>
-      <div class="row"></div>
+      <div class="row"></div><!--END of source and destination-->
       <br />
+
+      <!---START of datepicker---->
       <div class="row">
         <div class="col-sm-3">
           <input type='text' class="form-control" placeholder = "Travel Date" data-provide="datepicker" id="travel_date" ng-model = "travel_date" required/>
@@ -165,25 +156,16 @@
         <div class="col-md-1">
         </div>
         <div class="col-sm-3">
-<!--<<<<<<< HEAD-->
-
-          <!--<input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date" ng-model = "return_date" required/>-->
-
-<!--=======-->
           <input type='text' class="form-control" placeholder="Return Date" data-provide="datepicker" id="return_date" ng-model = "return_date" required/>
-<!--&gt;>>>>>> origin/sudha-->
         </div>
-      </div>
+      </div><!--END of datepicker-->
       <br/>
+
+      <!--START of drag and drop-->
       <div class="row">
         <div class="col-md-6">
           Pick your preferred Airlines below
-          <!--The list of Flights to be chosen by the user as preferred flights for priortized flight suggestions in the future    -->
-<!--<<<<<<< HEAD-->
-         <!--Implementing drag and drop-->
-<!--=======-->
-
-<!--&gt;>>>>>> origin/sudha-->
+          <!--The list of Flights to be chosen by the user as preferred flights for priortized flight suggestions in the future-->
           <ul id="chooseflights" title="Pick your preferred Airlines below">
             <li class="draggable"><img class="img" src="/images/American.jpg"/>American Airlines</li>
             <li class="draggable"><img class="img" src="/images/jetblue.jpeg"/>JetBlue</li>
@@ -199,21 +181,16 @@
         </div>
         <div class="col-md-6">
           <!--The flights are to be dropped in this fieldset by the user-->
-          Drop Your Favourite Airlines below        <!--<fieldset class="field">-->
-
+          Drop Your Favourite Airlines below
           <!--JQUERY UI widget==> Header used for better styled Headings-->
           <ul id="fav_flights" ng-model = "preferred_flights" title="Drop Your Favourite Airlines below" class="droppable"></ul>
         </div>
-      </div>
-<!--<<<<<<< HEAD-->
-
-<!--=======-->
-<!--&gt;>>>>>> origin/sudha-->
+      </div><!--END of drag and drop-->
       <input type="submit"  id="searchfli" class="btn" value = "Search Flights">
     </form>
   </fieldset>
 
-
+  <!---START of booking history---->
 <div class="panel-group" class="accordion" id="bookings">
   <h1>My History</h1>
   <div class="panel panel-default">
@@ -240,8 +217,6 @@
           <p>08:05     14:30</p>
         </div>
         <div class="col-sm-4">
-          <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
-          <!--<p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>-->
         </div>
       </div>
       <span class="label label-warning">2 seats left</span>
@@ -334,11 +309,8 @@
           <p>08:05     14:30</p>
         </div>
         <div class="col-sm-4">
-          <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
-          <!--<p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>-->
         </div>
       </div>
-      <!--<span class="label label-warning">7 seats left</span>-->
       <br/>
       <br/>
       <!---END Flight fetch--->
@@ -356,8 +328,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> <!---END of booking history---->
 
+<!---START of Existing bookings----->
   <div class="panel-group" class="accordion" id="current">
     <h1>Current Bookings</h1>
     <div class="panel panel-default">
@@ -384,8 +357,6 @@
             <p>09:05     14:00</p>
           </div>
           <div class="col-sm-4">
-            <!--<p><button class="btn success" id="book_button">Select Flight</button></p>-->
-            <!--<p><input type="submit"  id="book_button" class="btn success" value = "Select Flight" onclick="location.href='confirmationpage.html'"></p>-->
           </div>
         </div>
         <span class="label label-warning">2 seats left</span>
@@ -393,8 +364,7 @@
         <br/>
         <!---END Flight fetch--->
         <h4 class="panel-title" id="view-details">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-            View Details</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">View Details</a>
         </h4>
       </div>
       <div id="collapse1" class="panel-collapse collapse in">
@@ -407,32 +377,9 @@
       </div>
     </div>
 </div>
+</div> <!-----END of existing bookings----->
 
-<!--<div class="container" id ="bookings" >-->
-  <!--<div class="row row-content">-->
-    <!--<div class="col-md-3">-->
-
-      <!--&lt;!&ndash;Bootstrap used to divide the row into 2 sections&ndash;&gt;-->
-      <!--<fieldset id="field">-->
-        <!--<ol id="existingBooking">-->
-          <!--<li id="libooking" value="1">Date: 01/01/2018</br>-->
-            <!--To: San Fransisco</br>-->
-            <!--From: Chicago</br>-->
-            <!--Time: 12:30AM</br>-->
-          <!--</li>-->
-          <!--<li id="libooking">Date: 01/31/2018</br>-->
-            <!--To: Chicago</br>-->
-            <!--From: SanFransisco</br>-->
-            <!--Time: 12:30AM-->
-          <!--</li>-->
-
-        <!--</ol>-->
-      <!--</fieldset>-->
-    <!--</div>-->
-  <!--</div>-->
-</div>
-
-
+<!--Footer code starts here--->
 <footer class="row-footer">
   <div class="container">
     <div class="row">
@@ -474,7 +421,6 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> <!--END of Footer--->
 </body>
-
 </html>

@@ -5,32 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="V-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Book Flights, Make your travel the best | FlyHigh</title>
     <link rel="icon" type="image/png" href="images/airplane.png">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
             src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!--<script src="/angularjs/homepage.js"></script>-->
     <script src="angularjs/login.js"></script>
-
     <script src="/otherjavascripts/homepage.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
     <script src="/otherjavascripts/homepage.js"></script>
-
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-
     <!-- Datepicker -->
     <link href='/otherjavascripts/CDN/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
     <script src='/otherjavascripts/CDN/bootstrap-datepicker.min.js' type='text/javascript'></script>
-
     <!--Internal Stylesheets-->
     <link rel="stylesheet" href="/stylesheets/homepage.css">
     <!--External Stylesheets-->
@@ -38,11 +30,10 @@
     <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery -->
-
 </head>
 
 <body id="body_bg" ng-app="login" ng-controller="login">
-<!--ng-app="search_flight" ng-controller="searchf">-->
+<!--START of Navbar-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_bar">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -50,28 +41,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <!--<a class="navbar-brand" href="#"><img src="images/airplane.png" height=30 width=41></a>-->
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Search</a></li> <!--Home button active by default-->
+            <li class="active"><a href="#">Search</a></li> <!--Search button active by default-->
             <li><a href="#">Booking History</a></li>
             <li><a href="#">Existing Booking</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-<!--<<<<<<< HEAD-->
-            <!--<li><a href="#" id="user" class="btn btn-md">-->
-                <!--<span class="glyphicon glyphicon-user"></span> Welcome Surbhit!-->
-<!--=======-->
             <li><a href="#" id="user" class="btn btn-md"> <span class="glyphicon glyphicon-user"></span> Welcome Surbhit!
-<!--&gt;>>>>>> origin/tushar-->
             </a></li>
             <li><a href="#"  ng-click="logout()" id="logout"  class="btn btn-md">
                 <span class="glyphicon glyphicon-log-out"></span> Log out
             </a></li>
         </ul>
     </div>
-</nav>
+</nav><!--END of Navbar -->
 
 <!--Fixed logo at the center of page--->
 <header id="header">
@@ -82,12 +67,8 @@
     </div>
 </header>
 
+<!--START of JUMBOTRON-->
 <header class="jumbotron" id="jumbotron">
-    <!--<video id="video-background" preload="" muted="" autoplay="" loop="">-->
-    <!--<source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">-->
-    <!--<source src="/images/airplane-animation1.mp4" type="video/mp4">-->
-    <!--<source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">-->
-    <!--</video>-->
     <div class="container">
         <div class="row row-header">
             <div class="col-xs-12 col-sm-8">
@@ -97,7 +78,7 @@
             </div>
         </div>
     </div>
-</header>
+</header> <!--END of JUMBOTRON-->
 
 
 <!---Pre-fill user details---->
@@ -106,54 +87,25 @@
     <div class="row">
         <div class="col-xs-12 col-md-8">
             <div class="panel panel-default">
-                <!--<div class="row display-tr" >-->
-                <!--<h3 class="panel-title display-td" >Passenger Details</h3>-->
                 <h3><div class="panel-heading">Passenger details </div></h3>
                 <div class="panel-body">
-                    <!--<div class="row">-->
                     <form method="get">
                         <div id="inlinedisplay">
-                            <!--<div class="row">-->
                             <input type="text" name = "surbhit" id="firstname" placeholder="Sudha" required>
-
                             <input type="text" name = "bhatnagar" id="lastname" placeholder="Ramachandran" required>
                             </br> </br>
-                            <!--</div>-->
                         </div>
-
-                        <!--<div class="row">-->
                         <input type="email" name = "email" id="email" placeholder="sudha@gmail.com" required>
                         </br> </br>
-                        <!--</div>-->
-
-                        <!--<div class="row">-->
-                        <!--<label for="gender"> Gender:</label></br>-->
-                        <!--<input type="radio" id="male" name="gender" value="male">-->
-                        <!--<label for="male"> Male</label>-->
-                        <!--<input type="radio" id="female" name="gender" value="female">-->
-                        <!--<label for="female"> Female</label>-->
-                        <!--</br> </br>-->
-                        <!--</div>-->
-
-                        <!--<div class="row">-->
-                        <!--<label for="DOB"> Date of birth:</label> <input type="date" id="birthday" name="birthday">-->
-                        <!--</br> </br>-->
-                        <!--</div>-->
-
-                        <!--<div class="row">-->
                         <label for="phone_number"> Phone number: </label> <input type="tel" name = "phone" id="phone" placeholder="111-111-1111">
                         </br> </br>
-                        <!--</div>-->
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!----END OF pre-fill passenger details form--->
+    </div><!----END OF pre-fill passenger details form--->
 
     <!--Start of Travel details--->
-
     <h3>Selected flight(s)</h3>
     <!----Accordion ONE for Travel flight---->
     <div class="panel-group" id="accordion">
@@ -337,7 +289,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!--START of Modal -->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -359,9 +311,10 @@
 
     </div>
 </div>
-</div>
+</div><!--END of Modal -->
 </body>
 
+<!--START of Footer-->
 <footer class="row-footer">
     <div class="container">
         <div class="row">
@@ -403,7 +356,6 @@
             </div>
         </div>
     </div>
-</footer>
+</footer><!--END of Footer-->
 </body>
-
 </html>

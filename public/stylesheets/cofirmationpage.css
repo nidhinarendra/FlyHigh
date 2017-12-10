@@ -55,9 +55,6 @@ strong.logo {
     background: url("/images/airplane.png");
     background-repeat: no-repeat;
     background-color: transparent;
-    /*background-image: url('/images/airplane.png');*/
-    /*background-repeat: no-repeat;*/
-    /*background-color: transparent;*/
 }
 
 
@@ -73,8 +70,6 @@ strong.logo {
 }
 .field {
     opacity:0.7;
-    /*margin-top: -80px;*/
-    /*margin-left: 80px;*/
     background-color: white;
 }
 #chooseflights,
@@ -167,30 +162,10 @@ strong.logo {
     border-radius: 3px;
 }
 
-/*#logout{*/
-    /*color: #fff;*/
-    /*background-color: #42b9f4;*/
-    /*border-color: #000000;*/
-/*}*/
-
-/*#logout:hover{*/
-    /*color: #000000;*/
-/*}*/
 
 #logo{
-    /*background-repeat: no-repeat;*/
     z-index: 7;
 }
-
-/*#user{*/
-    /*color: #ffffff;*/
-    /*background-color: #42b9f4;*/
-    /*border-color: #000000;*/
-/*}*/
-
-/*#user:hover{*/
-    /*color: #000000;*/
-/*}*/
 
 #oneway-btn{
     color: #FFFFFF;
@@ -226,7 +201,6 @@ strong.logo {
 #carousel_set{
     height: 50%;
     background-color: transparent;
-    /*max-width: 2000px;*/
     width: 98%;
     position: relative;
     margin-bottom: 20px;
@@ -256,7 +230,6 @@ strong.logo {
 #searchfli{
     background-color: #42b9f4;
     color: #fff;
-    /*z-index: -3;*/
 }
 
 #searchfli:hover{

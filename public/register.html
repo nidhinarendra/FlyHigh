@@ -4,8 +4,6 @@
 	<title>Book Flights, Make your travel the best | FlyHigh</title>
 	<link rel="icon" type="image/png" href="images/airplane.png">
 <link rel="stylesheet" href="/stylesheets/style.css">
-
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -17,21 +15,17 @@
 	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="angularjs/login.js"></script>
 <script src="otherjavascripts/passwordCheck.js" type="text/javascript"></script>
-
 </head>
 
 <body ng-app="login" ng-controller="login">
-
 <div class="container">
 	<div class="container-lg p-responsive position-relative" id="cont-lg">
 	<div class="d-md-flex" id="registercont">
+
+		<!---START of SIGN up--->
 	<div class="col-md-7 text-center text-md-left" id="registerpage-signup">
 	<div class="card card-container" id="card-container">
-		<!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
 		<img id="profile-img" class="profile-img" />
-		<!--<p id="profile-name" class="profile-name-card"></p>-->
-
-
 		<form method="post" ng-submit="register();" name="reg">
 			<input type="text" class="form-control" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name" required autofocus>
 			</br>
@@ -52,17 +46,15 @@
 			<label for="female"> Female</label> <br> <br>
 			<label for="DOB"> Date of birth:</label> <input type="date" id="birthday" ng-model="birthday" name="birthday">
 			<br> <br>
-
 			<label for="phone_number" id="phnum"> Phone number   </label> <input type="tel" class="form-control" ng-model="phone" name = "phone" id="phone" placeholder="xxx-xxx-xxxx " pattern="^\d{3}-\d{3}-\d{4}$" required>
 			</br>
-			<!--<input class="btn btn-lg btn-primary btn-block btn-signin" value="Sign-in" id="sign-in" type="submit"/>-->
 			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Join us" id="join-us" />
-			<!--<input type="submit" value="Join us">-->
-
 			</br>
 		</form>
 		</div>
-	</div>
+	</div> <!---END of SIGN up--->
+
+		<!---START of transparent panel--->
 		<div class="mx-auto col-sm-8 col-md-6 hide-sm" id="registerpage-signin" >
 			<div class="card card-container" id="card2">
 				<h1>Once a year, go someplace you've never been before</h1>
@@ -74,7 +66,7 @@
 			<label for="existingCustomer" id="existingCustomer">Existing Customer?</label>&ensp;
 			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign-in" id="reg-signin" onclick="location.href='login.html'"/>
 			</div>
-		</div>
+		</div><!---END of transparent panel--->
 	</div>
 </div>
 </div>

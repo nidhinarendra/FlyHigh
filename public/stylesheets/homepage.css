@@ -52,7 +52,6 @@ strong.logo {
 }
 
 #logo{
-  /*color: #000;*/
   z-index: 3;
   position: fixed;
   width: 150px;
@@ -60,9 +59,6 @@ strong.logo {
   background: url("/images/airplane.png");
   background-repeat: no-repeat;
   background-color: transparent;
-  /*background-image: url('/images/airplane.png');*/
-  /*background-repeat: no-repeat;*/
-  /*background-color: transparent;*/
 }
 
 
@@ -78,8 +74,6 @@ strong.logo {
 }
 .field {
   opacity:0.7;
-  /*margin-top: -80px;*/
-  /*margin-left: 80px;*/
   background-color: white;
 }
 #chooseflights,
@@ -89,7 +83,6 @@ strong.logo {
   width: 400px;
   height: 350px;
   padding: 0.5em;
-  /*float: left;*/
   margin: 10px;
   border: 1px solid red;
 }
@@ -172,30 +165,9 @@ strong.logo {
   border-radius: 3px;
 }
 
-/*#logout{*/
-  /*color: #fff;*/
-  /*background-color: #42b9f4;*/
-  /*border-color: #000000;*/
-/*}*/
-
-/*#logout:hover{*/
-  /*color: #000000;*/
-/*}*/
-
 #logo{
-  /*background-repeat: no-repeat;*/
   z-index: 7;
 }
-
-/*#user{*/
-  /*color: #ffffff;*/
-  /*background-color: #42b9f4;*/
-  /*border-color: #000000;*/
-/*}*/
-
-/*#user:hover{*/
-  /*color: #000000;*/
-/*}*/
 
 #oneway-btn.launch{
   color: #FFFFFF;
@@ -207,10 +179,6 @@ strong.logo {
   background-color: #42b9f4;
 }
 
-/*#twoway-btn{*/
-  /*color: #FFFFFF;*/
-  /*background-color: #cdd1d3;*/
-/*}*/
 #twoway-btn.focus{
   color: #FFFFFF;
   background-color: #42b9f4;
