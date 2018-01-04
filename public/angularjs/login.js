@@ -7,6 +7,14 @@ login.controller('login', function($scope, $http) {
     // $scope.user = sessionStorage.getItem("emp-key");
   $scope.invalid_login = true;
   $scope.unexpected_error = true;
+  // $scope.init2 = function(){
+  //
+  // };
+  // var flightlist = [];
+  // $scope.source = "";
+  // $scope.destination = "";
+  // $scope.travel_date = Date();
+  // $scope.return_date = Date();
   console.log('Inside login');
   /*--------------------------------Function to receive data from user login page(login.html) and call backend service(checklogin_service.js)---------*/
   $scope.signIn = function() {
@@ -105,15 +113,46 @@ login.controller('login', function($scope, $http) {
   };
 
   // $scope.user = sessionStorage.getItem('username');
+  $scope.flights = {
+      0: 1,
+      1: 1,
+      2: 1,
+      3: 1,
+      4: 1,
+      5: 1,
+      6: 1,
+      7: 1,
+      8: 1,
+      9: 1
+  };
+  // $scope.travel= {
+  //   name: 'oneway'
+  // };
+    $scope.travelname;
 
   $scope.searchf = function () {
       console.log('Inside searchflight function');
+      var flights_list = ["American Airlines","JetBlue","United Airlines","Southwest Airlines","Alaska Airlines","Delta Airlines","Virgin Atlantic Airlines","Cape Air","Elite Airlines","USA jet Airlines"];
+      var preferredflights = flights_list;
+      // var preferredflights=[];
+      // $scope.travel= {
+      //     type: 'oneway'
+      // };
+      // $scope.traveltype =  {
+      //     "id": "12345",
+      //     "value": 1
+      // };
       var data1_np = {
           source: $scope.source,
           destination: $scope.destination,
           travel_date: $scope.travel_date
-
       };
+      for(var i=0; i<=9;i++) {
+          if($scope.flights[i]===0){
+              // preferredflights.push(flights_list[i]);
+              preferredflights.splice(i, 1);
+          }
+      }
       $http({
           method: 'POST',       //Using http method POST
           url: '/search_oneway',
@@ -127,10 +166,16 @@ login.controller('login', function($scope, $http) {
 
                   $scope.unexpected_error = true;
               } else if (data.statusCode === 200) {     //If user validated successfully redirect to homepage
+                  // window.location.assign('/flightssearch');
+                  alert("oneway is: "+ $scope.travelname + " and twoway is : "+ $scope.travelname);
+
                   window.location.assign('/flightssearch');
-                  console.log('delivering flights');
-                  $scope.bookf
               }
+          // });
+                  // flightlist = data.resResult;
+                  // console.log('delivering flights');
+                  // $scope.bookf
+              // }
           })
           .error(function (error) {
               $scope.unexpected_error = false;
@@ -258,6 +303,15 @@ login.controller('login', function($scope, $http) {
       //   }
   };
 
+  $scope.init = function () {
+      console.log("inside init function");
+      var flights = sessionStorage.getItem("flights");       //$location.search();
+      $scope.flightslist = flights;
+      window.alert(flights);
+  };
+  // $scope.flightssearch = function(){
+  //
+  // };
   $scope.bookf = function () {
     console.log('Inside searchflight function');
 

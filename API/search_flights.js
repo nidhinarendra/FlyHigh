@@ -24,6 +24,7 @@ exports.get_flights_oneway = function(req, res) {
                 statusCode: 200,
                 resResult: result
             };
+            req.session.flights = result;
             console.log("hi", JSON.stringify(json_response));
             res.send(json_response);
         });
@@ -63,10 +64,13 @@ exports.get_preferredflights_oneway = function(req, res) {
             }
             console.log("The preferred flights are: ",flights);
             // console.log(result);
+
             json_response = {
                 statusCode: 200,
                 resResult: flights
             };
+
+            req.session.flights = flights;
             // console.log("hi"+json_response);
             res.send(json_response);
         });
@@ -139,6 +143,8 @@ exports.get_flights_twoway = function(req, res) {
                     flightslist: result,
                     returnlist: returnflights
                 };
+                req.session.flightslist = result;
+                req.session.returnlist = returnflights;
                 res.send(json_response);
 
             });

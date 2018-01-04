@@ -22,6 +22,7 @@ exports.post_user_flight = function(req, res) {     //Service to post user and f
         var coll = mongo.collection('Bookings');
         console.log("u r inserting data to bookings ");
         coll.insert(save_data);
+        res.send({status:"200"})
     });
 };
 
@@ -30,9 +31,7 @@ exports.get_user_flight= function (req,res) {       //Service to receive user bo
     mongo.connect(keys.mongoURI, function() {
         var coll = mongo.collection('Bookings');
         coll.find({
-            username: req.body.uername,
-            fligtName: req.body.flightname,
-            Date: req.body.date
+            username: req.body.username
         }).forEach(function (doc) {
             res.send(doc);
         });

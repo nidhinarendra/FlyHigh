@@ -71,9 +71,9 @@
       <li><a href="#">Existing Booking</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <!--<li><a href="#"  id="user" class="btn btn-md">-->
-        <!--<span class="glyphicon glyphicon-user"></span> {{user}}-->
-      <!--</a></li>-->
+      <li><a href="#"  id="user" class="btn btn-md">
+        <span class="glyphicon glyphicon-user"></span> {{user}}
+      </a></li>
       <li><label ng-click="logout()" id="logout"  class="btn btn-md">
         <span class="glyphicon glyphicon-log-out"></span> Log out
       </label></li>
@@ -150,12 +150,12 @@
 
             <div class="btn-group" data-toggle="buttons">
             <label class="btn active" id="oneway-btn" onclick= "hide_function()">
-                <input type="radio" id="one-way" ng-model = "oneway" /> One Way
+                <input type="radio" id="one-way" ng-model = "travelname" value = "oneway" /> One Way
             </label>
             <label class="btn " id="twoway-btn" onclick= "show_function()">
-                    <input type="radio" id="round-trip" ng-model = "twoway" /> Round Trip
+                <input type="radio" id="round-trip" ng-model = "travelname" value = "twoway"/> Round Trip
             </label>
-
+          <p> Traveltype is {{travelname}}</p>
             </div>
           </p><br/>
         </div>
@@ -196,17 +196,20 @@
           Pick your preferred Airlines below
           <!--The list of Flights to be chosen by the user as preferred flights for priortized flight suggestions in the future    -->
          <!--Implementing drag and drop-->
+          <!--<label class="btn active" id="oneway-btn">-->
+            <!--<input type="radio" id="one-way" ng-model="American Airlines" /> One Way-->
+          <!--</label>-->
           <ul id="chooseflights" title="Pick your preferred Airlines below">
-            <li class="draggable"><img class="img" src="/images/American.jpg"/>American Airlines</li>
-            <li class="draggable"><img class="img" src="/images/jetblue.jpeg"/>JetBlue</li>
-            <li class="draggable"><img class="img" src="/images/united.jpeg"/>United Airlines</li>
-            <li class="draggable"><img class="img" src="/images/Southwest.jpeg"/>Southwest Airlines</li>
-            <li class="draggable"><img class="img" src="/images/Alaska.jpeg"/>Alaska Airlines</li>
-            <li class="draggable"><img class="img" src="/images/Delta.jpeg"/>Delta Airlines</li>
-            <li class="draggable"><img class="img" src="/images/virgin.jpeg"/>Virgin Atlantic Airlines</li>
-            <li class="draggable"><img class="img" src="/images/Capeair.jpeg"/>Cape Air</li>
-            <li class="draggable"><img class="img" src="/images/elite.jpeg"/>Elite Airlines</li>
-            <li class="draggable"><img class="img" src="/images/usajet.jpeg"/>USA jet Airlines</li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[0]" ng-false-value="0" /><img class="img" src="/images/American.jpg"/>American Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[1]" ng-false-value="0" /><img class="img" src="/images/jetblue.jpeg"/>JetBlue</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[2]" ng-false-value="0" /><img class="img" src="/images/united.jpeg"/>United Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[3]" ng-false-value="0" /><img class="img" src="/images/Southwest.jpeg"/>Southwest Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[4]" ng-false-value="0" /><img class="img" src="/images/Alaska.jpeg"/>Alaska Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[5]" ng-false-value="0" /><img class="img" src="/images/Delta.jpeg"/>Delta Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[6]" ng-false-value="0" /><img class="img" src="/images/virgin.jpeg"/>Virgin Atlantic Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[7]" ng-false-value="0" /><img class="img" src="/images/Capeair.jpeg"/>Cape Air</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[8]" ng-false-value="0" /><img class="img" src="/images/elite.jpeg"/>Elite Airlines</label></li>
+            <li class="draggable"><label class="btn"><input type="checkbox" class="pref_airlines" ng-model="flights[9]" ng-false-value="0" /><img class="img" src="/images/usajet.jpeg"/>USA jet Airlines</label></li>
           </ul>
           <!--</div>-->
           <!--</div>-->
